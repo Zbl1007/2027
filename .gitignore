@@ -3,7 +3,8 @@ __pycache__/
 *.py[cod]
 .venv/
 .pytest_cache/
-
+outputs/
+external/
 *.mph
 *.mphbin
 *.mphstatus
