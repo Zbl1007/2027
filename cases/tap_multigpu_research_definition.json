@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "document_type": "case_definition_draft_not_normalized_or_compiled_case",
+  "case_id": "tap_multigpu_50x50_derived_etm",
+  "status": "missing_parameters",
+  "solver_ready": false,
+  "layout_reference": "references/mypdn_case/multigpu.yaml",
+  "layout_sha256": "0c1d29ccb291efec3ba15ac569ce0a5d9274c2a615bd2546a2616207d66076e3",
+  "layout_policy": "preserve existing explicit derived coordinates and dimensions; no optimization",
+  "parameter_registry": "parameters/registry.json",
+  "required_physics": {
+    "package_profile": null,
+    "stackup": null,
+    "power_rails": null,
+    "source_and_return": null,
+    "rdl": null,
+    "pg_counts_per_rail": null,
+    "via_geometry": null,
+    "via_layout": null,
+    "material_properties": null,
+    "load_heat_policy": null,
+    "thermal_boundary": null,
+    "mechanical_reference_and_boundary": null,
+    "mechanical_backend": null
+  },
+  "mechanical_stress_pa": null,
+  "analysis_runs": []
+}

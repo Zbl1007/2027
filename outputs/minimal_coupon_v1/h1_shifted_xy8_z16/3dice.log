@@ -1,0 +1,15 @@
+Preparing stk data ... 
+Read in configuration files took 0.001 sec
+
+Preparing thermal data ... 
+Used threads (1) / maximum available for OpenMP (1)
+Cells: 9216 
+Connection List: 55808 
+
+Preparing thermal data took 0.01698 sec
+
+Factorization took 0.13403 sec
+Solve took 0.00170 sec
+
+Emulation took 0.172 sec
+Peak memory usage: 41.03 GB

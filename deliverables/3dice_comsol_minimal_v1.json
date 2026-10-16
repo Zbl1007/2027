@@ -1,0 +1,7 @@
+{
+  "file": "3dice_comsol_minimal_v1.zip",
+  "sha256": "d170f312c117ab726c06e26aada668b87b815df4b07df0b019489cbb157611f6",
+  "files": 130,
+  "comsol_status": "pending_external_solver",
+  "includes_solved_mph": false
+}

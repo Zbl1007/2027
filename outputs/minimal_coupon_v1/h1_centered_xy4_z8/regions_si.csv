@@ -1,0 +1,10 @@
+id,material,x_m,y_m,width_m,depth_m
+si_bottom,silicon,0,0,5e-05,1.9e-05
+si_top,silicon,0,3.1e-05,5e-05,1.9e-05
+si_left,silicon,0,1.9e-05,1.9e-05,1.2e-05
+si_right,silicon,3.1e-05,1.9e-05,1.9e-05,1.2e-05
+ox_bottom,silica,1.9e-05,1.9e-05,1.2e-05,9.999999999999997e-07
+ox_top,silica,1.9e-05,3e-05,1.2e-05,9.999999999999997e-07
+ox_left,silica,1.9e-05,2e-05,9.999999999999997e-07,1e-05
+ox_right,silica,3e-05,2e-05,9.999999999999997e-07,1e-05
+cu_core,copper,2e-05,2e-05,1e-05,1e-05

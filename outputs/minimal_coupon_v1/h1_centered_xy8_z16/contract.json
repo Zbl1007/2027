@@ -1,0 +1,107 @@
+{
+  "case_id": "h1_centered_xy8_z16",
+  "fidelity": "synthetic_fixture",
+  "definition_sha256": "0ce4691d470f14cd9b801d51f218dbc1fcea68bbd2bad7bddd49e73df3a4219f",
+  "size_m": [
+    5e-05,
+    5e-05,
+    0.00011
+  ],
+  "regions": [
+    {
+      "id": "si_bottom",
+      "material": "silicon",
+      "x_m": 0,
+      "y_m": 0,
+      "width_m": 5e-05,
+      "depth_m": 1.9e-05
+    },
+    {
+      "id": "si_top",
+      "material": "silicon",
+      "x_m": 0,
+      "y_m": 3.1e-05,
+      "width_m": 5e-05,
+      "depth_m": 1.9e-05
+    },
+    {
+      "id": "si_left",
+      "material": "silicon",
+      "x_m": 0,
+      "y_m": 1.9e-05,
+      "width_m": 1.9e-05,
+      "depth_m": 1.2e-05
+    },
+    {
+      "id": "si_right",
+      "material": "silicon",
+      "x_m": 3.1e-05,
+      "y_m": 1.9e-05,
+      "width_m": 1.9e-05,
+      "depth_m": 1.2e-05
+    },
+    {
+      "id": "ox_bottom",
+      "material": "silica",
+      "x_m": 1.9e-05,
+      "y_m": 1.9e-05,
+      "width_m": 1.2e-05,
+      "depth_m": 9.999999999999997e-07
+    },
+    {
+      "id": "ox_top",
+      "material": "silica",
+      "x_m": 1.9e-05,
+      "y_m": 3e-05,
+      "width_m": 1.2e-05,
+      "depth_m": 9.999999999999997e-07
+    },
+    {
+      "id": "ox_left",
+      "material": "silica",
+      "x_m": 1.9e-05,
+      "y_m": 2e-05,
+      "width_m": 9.999999999999997e-07,
+      "depth_m": 1e-05
+    },
+    {
+      "id": "ox_right",
+      "material": "silica",
+      "x_m": 3e-05,
+      "y_m": 2e-05,
+      "width_m": 9.999999999999997e-07,
+      "depth_m": 1e-05
+    },
+    {
+      "id": "cu_core",
+      "material": "copper",
+      "x_m": 2e-05,
+      "y_m": 2e-05,
+      "width_m": 1e-05,
+      "depth_m": 1e-05
+    }
+  ],
+  "region_volumes_m3": {
+    "silicon": 2.5916e-13,
+    "copper": 1.1000000000000002e-14,
+    "silica": 4.839999999999999e-15
+  },
+  "total_power_w": 0.0012958,
+  "q_silicon_w_m3": 5000000000.0,
+  "xy_subdivisions_per_region": 8,
+  "z_cells": 16,
+  "expected_cells": 9216,
+  "thermal_boundary": {
+    "ambient_k": 300.0,
+    "top_h_w_m2k": 100000.0,
+    "other_faces": "adiabatic",
+    "source": "ice_solid",
+    "interface": "perfect_thermal_contact"
+  },
+  "three_d_ice_inputs": {
+    "case.stk": "ceae24306d7c033f8a1bfe0b742b6c2437998d1e0755c0b51cc6e4b41bc62a7c",
+    "source.flp": "e69bfb218ce24e0bc39845bc82f938bcb622b0614c6447547e4c8468887fb2aa"
+  },
+  "mechanical_stress_pa": null,
+  "comsol_status": "pending_external_solver"
+}

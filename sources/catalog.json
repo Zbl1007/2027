@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "tap_cfg",
+      "title": "TAP Multi-GPU official configuration",
+      "source_kind": "official_benchmark_config",
+      "reviewed_on": "2026-10-16",
+      "verification_scope": "file_verified",
+      "url": "https://github.com/bu-icsg/TAP-2.5D/blob/3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb/configs/sys_multigpu.cfg",
+      "local_snapshot": "references/upstream/tap25d/configs/sys_multigpu.cfg",
+      "sha256": "6585bf9588d96b7e03277a17d8865dc2f105005356a77b333f5485c9b30865a3",
+      "limitations": "无最终坐标、P/G 网表或机械参数",
+      "commit": "3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb"
+    },
+    {
+      "source_id": "tap_thermal",
+      "title": "TAP passive interposer thermal model",
+      "source_kind": "official_model_code",
+      "reviewed_on": "2026-10-16",
+      "verification_scope": "file_verified_static_only",
+      "url": "https://github.com/bu-icsg/TAP-2.5D/blob/3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb/passive_interposer.py",
+      "local_snapshot": "references/upstream/tap25d/passive_interposer.py",
+      "sha256": "dcbbaaa86a187bac3f1a1b12f49bd0dfc1c6cb3ed4e50ec51583f762adcf0a52",
+      "limitations": "等效热模型，不证明真实逐孔 P/G 或实测材料值",
+      "commit": "3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb"
+    },
+    {
+      "source_id": "tap_hotspot",
+      "title": "TAP bundled HotSpot defaults",
+      "source_kind": "official_model_configuration",
+      "reviewed_on": "2026-10-16",
+      "verification_scope": "file_verified",
+      "url": "https://github.com/bu-icsg/TAP-2.5D/blob/3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb/util/hotspot.config",
+      "local_snapshot": "references/upstream/tap25d/util/hotspot.config",
+      "sha256": "1c92fb1c03d279a26ae0fd7a51ac4a9a0fef004223af0f5603c6619d75b949dc",
+      "limitations": "部分默认值由官方代码按尺寸覆盖",
+      "commit": "3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb"
+    },
+    {
+      "source_id": "local_layout",
+      "title": "mypdn TAP-derived fixed layout",
+      "source_kind": "existing_case",
+      "reviewed_on": "2026-10-16",
+      "verification_scope": "file_verified",
+      "url": null,
+      "local_snapshot": "references/mypdn_case/multigpu.yaml",
+      "sha256": "0c1d29ccb291efec3ba15ac569ce0a5d9274c2a615bd2546a2616207d66076e3",
+      "limitations": "派生尺寸；电压和频率为 local legacy"
+    },
+    {
+      "source_id": "local_iccad",
+      "title": "mypdn ICCAD model parameter table",
+      "source_kind": "local_model_reference",
+      "reviewed_on": "2026-10-16",
+      "verification_scope": "local_file_verified_external_provenance_unverified",
+      "url": null,
+      "local_snapshot": "references/mypdn_model_reference/table1.tex",
+      "sha256": "0fc15dc32f2b1c21045a0516c5442399866a15d6db8971255c33ec19eb6e7552",
+      "limitations": "本地表不是外部来源，不代表 TAP 技术参数"
+    },
+    {
+      "source_id": "tap_date2021",
+      "title": "Ma et al., TAP-2.5D, DATE 2021",
+      "source_kind": "primary_paper",
+      "reviewed_on": "2026-10-16",
+      "verification_scope": "relevant_full_text_sections_read",
+      "url": "https://www.date-conference.com/proceedings-archive/2021/pdf/1516.pdf",
+      "local_snapshot": null,
+      "sha256": null,
+      "limitations": "不是完整 ETM 设计",
+      "reviewed_locator": "III-A, Multi-GPU case study, references 28 and 29"
+    },
+    {
+      "source_id": "lu_ectc2009",
+      "title": "Lu et al., Thermo-Mechanical Reliability of 3-D ICs containing Through Silicon Vias, ECTC 2009",
+      "source_kind": "primary_paper_author_hosted",
+      "reviewed_on": "2026-10-16",
+      "verification_scope": "relevant_full_text_sections_read",
+      "url": "https://sites.utexas.edu/ruihuang/files/2021/03/ECTC2009.pdf",
+      "local_snapshot": null,
+      "sha256": null,
+      "limitations": "制造残余应力与工作温升不同；未从此文填充当前材料表",
+      "reviewed_locator": "pp. 630-631: FEA setup and TSV array interaction"
+    },
+    {
+      "source_id": "ted2011",
+      "title": "Characterization and Design of Through-Silicon Via Arrays in Three-Dimensional ICs Based on Thermomechanical Modeling, IEEE TED 58(2), 279-287",
+      "source_kind": "primary_paper_publisher",
+      "reviewed_on": "2026-10-16",
+      "verification_scope": "abstract_and_metadata_only",
+      "url": "https://ieeexplore.ieee.org/document/5640664/",
+      "local_snapshot": null,
+      "sha256": null,
+      "limitations": "DOI 10.1109/TED.2010.2089987；未核对全文参数表"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "analysis_extent_m": {
+    "height": 0.0008,
+    "width": 0.001
+  },
+  "floorplan_declared_power_role": "independent_reference",
+  "instances": [
+    {
+      "declared_power_w": 1.0,
+      "instance": "DIE0",
+      "mapping_policy": "uniform_within_physical_instance",
+      "rail_power_w": {
+        "one_volt": 1.0
+      },
+      "total_power_w": 1.0
+    }
+  ],
+  "native_extent_m": {
+    "height": 0.0008,
+    "width": 0.001
+  },
+  "padding_area_ratio": 0.0,
+  "padding_origin_policy": "lower_left_fixed_right_top_pad",
+  "power_authority": "netlist_chiplet_bump_iv",
+  "schema_version": 1,
+  "spatial_policy": "uniform_within_physical_instance_exact_area_overlap"
+}

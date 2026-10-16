@@ -1,0 +1,79 @@
+[
+  {
+    "group": "data_dc",
+    "command": [
+      "/tmp/mypdn-etm-p0-20261015-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_tap_50x50_cases.py",
+      "tests/cases",
+      "tests/unit/test_config_units.py",
+      "tests/unit/test_schema_v2.py",
+      "tests/unit/test_prepared_circuit.py",
+      "tests/unit/test_dc_activation.py",
+      "tests/golden/test_dc_builder_analytic.py",
+      "tests/golden/test_multi_ground_dc_builder.py",
+      "tests/golden/test_site_option_dc_v2.py",
+      "-q",
+      "-ra",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml=/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/data_dc.xml"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 5.994,
+    "log": "data_dc.log",
+    "junit": "data_dc.xml"
+  },
+  {
+    "group": "thermal_et",
+    "command": [
+      "/tmp/mypdn-etm-p0-20261015-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_thermal_formulas.py",
+      "tests/unit/test_thermal_mapping.py",
+      "tests/unit/test_thermal_v2_types.py",
+      "tests/unit/test_thermal_v2_selected_macros.py",
+      "tests/unit/test_thermal_v2_mapping.py",
+      "tests/unit/test_electrothermal_mapping.py",
+      "tests/golden/test_thermal_analytic.py",
+      "tests/golden/test_thermal_v2_analytic.py",
+      "tests/golden/test_electrothermal_fixed_point.py",
+      "tests/golden/test_electrothermal_v2.py",
+      "-q",
+      "-ra",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml=/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/thermal_et.xml"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 4.701,
+    "log": "thermal_et.log",
+    "junit": "thermal_et.xml"
+  },
+  {
+    "group": "physics_hard",
+    "command": [
+      "/tmp/mypdn-etm-p0-20261015-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_tiv_macro_physics_v2.py::test_effective_geometry_derives_all_lumped_macro_physics",
+      "tests/unit/test_tiv_macro_physics_v2.py::test_effective_geometry_rejects_nonphysical_copper_occupancy",
+      "tests/unit/test_hard_placement_v2.py",
+      "tests/golden/test_fresh_hard_constraints_v2.py::test_repeated_calls_are_fresh_rebuilds_with_stable_constraints",
+      "tests/golden/test_fresh_hard_constraints_v2.py::test_soft_and_stale_hard_placements_are_rejected",
+      "tests/golden/test_fresh_hard_constraints_v2.py::test_fresh_hard_constraints_match_across_backends[scipy]",
+      "tests/unit/test_calibration_v2_reference.py",
+      "-q",
+      "-ra",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml=/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/physics_hard.xml"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 5.384,
+    "log": "physics_hard.log",
+    "junit": "physics_hard.xml"
+  }
+]

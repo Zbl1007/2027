@@ -1,0 +1,64 @@
+ERROR: found no collectors for /Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_tiv_macro_physics_v2.py::test_effective_geometry_derives_all_lumped_macro_physics
+
+ERROR: found no collectors for /Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_tiv_macro_physics_v2.py::test_effective_geometry_rejects_nonphysical_copper_occupancy
+
+ERROR: found no collectors for /Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_fresh_hard_constraints_v2.py::test_repeated_calls_are_fresh_rebuilds_with_stable_constraints
+
+ERROR: found no collectors for /Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_fresh_hard_constraints_v2.py::test_soft_and_stale_hard_placements_are_rejected
+
+ERROR: found no collectors for /Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_fresh_hard_constraints_v2.py::test_fresh_hard_constraints_match_across_backends
+
+
+==================================== ERRORS ====================================
+___________ ERROR collecting tests/unit/test_tiv_macro_physics_v2.py ___________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_tiv_macro_physics_v2.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_tiv_macro_physics_v2.py:8: in <module>
+    from cowos_l_tiv.candidates import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+_______ ERROR collecting tests/golden/test_fresh_hard_constraints_v2.py ________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_fresh_hard_constraints_v2.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/golden/test_fresh_hard_constraints_v2.py:7: in <module>
+    from cowos_l_tiv.optimization.constraints_v2 import ConstraintV2Error
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+=========================== short test summary info ============================
+ERROR tests/unit/test_tiv_macro_physics_v2.py
+ERROR tests/golden/test_fresh_hard_constraints_v2.py
+2 errors in 0.36s

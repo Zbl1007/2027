@@ -1,0 +1,255 @@
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting tests/unit/test_thermal_formulas.py _____________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_thermal_formulas.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_thermal_formulas.py:8: in <module>
+    from cowos_l_tiv.builders.thermal import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+_____________ ERROR collecting tests/unit/test_thermal_mapping.py ______________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_thermal_mapping.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_thermal_mapping.py:7: in <module>
+    from cowos_l_tiv.builders.thermal import ThermalModelError
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+_____________ ERROR collecting tests/unit/test_thermal_v2_types.py _____________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_thermal_v2_types.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_thermal_v2_types.py:7: in <module>
+    from cowos_l_tiv.thermal_v2 import ThermalV2ValidationError, thermal_design_from_dict, thermal_design_to_dict
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+________ ERROR collecting tests/unit/test_thermal_v2_selected_macros.py ________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_thermal_v2_selected_macros.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_thermal_v2_selected_macros.py:8: in <module>
+    from cowos_l_tiv.thermal_v2 import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+____________ ERROR collecting tests/unit/test_thermal_v2_mapping.py ____________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_thermal_v2_mapping.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_thermal_v2_mapping.py:10: in <module>
+    from cowos_l_tiv.candidates import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+__________ ERROR collecting tests/unit/test_electrothermal_mapping.py __________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_electrothermal_mapping.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_electrothermal_mapping.py:6: in <module>
+    from cowos_l_tiv.builders import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+____________ ERROR collecting tests/golden/test_thermal_analytic.py ____________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_thermal_analytic.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/golden/test_thermal_analytic.py:10: in <module>
+    from cowos_l_tiv.analysis.thermal import create_thermal_simulation, solve_thermal
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+__________ ERROR collecting tests/golden/test_thermal_v2_analytic.py ___________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_thermal_v2_analytic.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/golden/test_thermal_v2_analytic.py:8: in <module>
+    from cowos_l_tiv.thermal_v2 import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+_______ ERROR collecting tests/golden/test_electrothermal_fixed_point.py _______
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_electrothermal_fixed_point.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/golden/test_electrothermal_fixed_point.py:8: in <module>
+    from cowos_l_tiv.analysis import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+___________ ERROR collecting tests/golden/test_electrothermal_v2.py ____________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_electrothermal_v2.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/golden/test_electrothermal_v2.py:8: in <module>
+    from cowos_l_tiv.builders.dc_v2 import build_dc_v2
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+=========================== short test summary info ============================
+ERROR tests/unit/test_thermal_formulas.py
+ERROR tests/unit/test_thermal_mapping.py
+ERROR tests/unit/test_thermal_v2_types.py
+ERROR tests/unit/test_thermal_v2_selected_macros.py
+ERROR tests/unit/test_thermal_v2_mapping.py
+ERROR tests/unit/test_electrothermal_mapping.py
+ERROR tests/golden/test_thermal_analytic.py
+ERROR tests/golden/test_thermal_v2_analytic.py
+ERROR tests/golden/test_electrothermal_fixed_point.py
+ERROR tests/golden/test_electrothermal_v2.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 10 errors during collection !!!!!!!!!!!!!!!!!!!
+10 errors in 2.22s

@@ -1,0 +1,26 @@
+{
+  "status": "not_run",
+  "solver": "COMSOL",
+  "solver_version": null,
+  "definition_sha256": "0ce4691d470f14cd9b801d51f218dbc1fcea68bbd2bad7bddd49e73df3a4219f",
+  "units": {
+    "displacement": "m",
+    "stress": "Pa",
+    "reaction": "N"
+  },
+  "m0a": {
+    "far_x_u_m": null,
+    "far_y_v_m": null,
+    "far_z_w_m": null,
+    "max_von_mises_pa": null
+  },
+  "m0b": {
+    "volume_mean_sigma_zz_pa": null,
+    "top_reaction_z_n": null,
+    "far_x_u_m": null
+  },
+  "model_files": [],
+  "solver_logs": [],
+  "constraint_screenshots": [],
+  "review_status": "pending_real_solver_and_manual_review"
+}

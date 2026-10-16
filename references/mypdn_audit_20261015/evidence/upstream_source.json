@@ -1,0 +1,8 @@
+{
+  "url": "https://raw.githubusercontent.com/bu-icsg/TAP-2.5D/3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb/configs/sys_multigpu.cfg",
+  "source_commit": "3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb",
+  "git_blob_sha": "dbf25696f91958c5c0ce83ba0761b54248fe6103",
+  "sha256": "6585bf9588d96b7e03277a17d8865dc2f105005356a77b333f5485c9b30865a3",
+  "expected_blob_matches": true,
+  "retrieved_date": "2026-10-15"
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "h0_z16",
+  "status": "three_d_ice_solved_comsol_pending",
+  "contract_sha256": "9236da07173ad18aa28bfdad8ac1c0764983b3f1b507fb001535263f97c863c7",
+  "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+  "returncode": 0,
+  "cell_count": 16,
+  "min_temperature_k": 305.0120192307624,
+  "max_temperature_k": 305.19305889422424,
+  "volume_mean_temperature_k": 305.1285024789596,
+  "total_power_w": 50.0,
+  "reconstructed_top_outward_heat_w": 49.999999999931816,
+  "heat_balance_relative_error": 1.3636736184707842e-12,
+  "comsol_stress_pa": null,
+  "artifacts_sha256": {
+    "temperature.vtk": "7c3834717539572d6667d7041dedbca4b73a38f506cf5574167ec9fd9009f5cd",
+    "3dice_field.csv": "ae801e849e8e05ba19f85106cafbc8bb07382b718646e95d294fa54fa42e98bd",
+    "sample_points_m.txt": "80b1ba955be7461ea2cdd29145eb1e5f274f61bd7c8a66b718e57f4d055f7732",
+    "3dice.log": "f054086993cf957bd556cf16945fe12e9bf1684c72e928e02d091601717256db"
+  },
+  "analytic_max_error_k": 0.0009390023973310235
+}

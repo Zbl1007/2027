@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "origin": "references/mypdn_audit_20261015/ETM_PARAMETER_GAPS.csv",
+  "gaps": [
+    {
+      "gap_id": "G01",
+      "parameter": "案例版本/尺寸来源",
+      "current_evidence_value": "现有 50×50 mm 派生布局；GPU18×18/HBM12×8",
+      "required_information": "确认沿用派生版或另建官方尺寸版本",
+      "unit": "mm",
+      "affected_backends": "all",
+      "impact": "不能混用两套几何",
+      "available_source": "现有 YAML + 固定 TAP cfg",
+      "blocks_research_model": "yes",
+      "blocking_condition": "研究模型身份冻结前",
+      "evidence_locator": "data/tap_50x50/multigpu.yaml; evidence/upstream_sys_multigpu.cfg",
+      "candidate_parameter_ids": [
+        "case.extent",
+        "case.chiplet_count",
+        "case.chiplet_dimensions"
+      ],
+      "candidate_source_ids": [
+        "local_layout",
+        "tap_cfg"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G02",
+      "parameter": "坐标/朝向及 bump 同步变换",
+      "current_evidence_value": "左下角；无 orientation",
+      "required_information": "显式朝向及局部坐标变换约定",
+      "unit": "deg;m",
+      "affected_backends": "all",
+      "impact": "body/bump/via 可能不一致",
+      "available_source": "现有布局及用户确认",
+      "blocks_research_model": "yes",
+      "blocking_condition": "涉及旋转或声明统一几何时",
+      "evidence_locator": "cases/parser.py:98; design/v2.py:153",
+      "candidate_parameter_ids": [
+        "case.orientation"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G03",
+      "parameter": "封装技术选择",
+      "current_evidence_value": "null；仅 workload/floorplan",
+      "required_information": "独立 silicon_interposer 或明确 CoWoS-L-like profile",
+      "unit": "enum",
+      "affected_backends": "all",
+      "impact": "不能确定基体及工艺",
+      "available_source": "用户封装方案/已有工艺资料",
+      "blocks_research_model": "yes",
+      "blocking_condition": "任何三场研究 evaluate",
+      "evidence_locator": "data/tap_50x50/multigpu.yaml:3",
+      "candidate_parameter_ids": [
+        "package.technology"
+      ],
+      "candidate_source_ids": [
+        "tap_thermal"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G04",
+      "parameter": "公共层叠 z/厚度/实体包络",
+      "current_evidence_value": "TAP case=null",
+      "required_information": "substrate/C4/underfill/RDL/interposer/bump/die/TIM/lid 的确认层叠",
+      "unit": "m",
+      "affected_backends": "all",
+      "impact": "无法共享三维几何或接触",
+      "available_source": "用户结构/CAD/有页码的公开工艺数据",
+      "blocks_research_model": "yes",
+      "blocking_condition": "构建研究几何前",
+      "evidence_locator": "thermal_v2/types.py:83",
+      "candidate_parameter_ids": [
+        "stack.substrate_thickness",
+        "stack.c4_thickness",
+        "stack.interposer_thickness",
+        "stack.microbump_thickness",
+        "stack.chip_thickness",
+        "stack.tim_thickness"
+      ],
+      "candidate_source_ids": [
+        "tap_thermal"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G05",
+      "parameter": "电源 rail/return/Vnom",
+      "current_evidence_value": "legacy vdd=1；无 supply pairs",
+      "required_information": "批准的 rail 电压与共享/独立回流关系",
+      "unit": "V",
+      "affected_backends": "electrical;ET",
+      "impact": "I=P/V 及局部压降基准未知",
+      "available_source": "实际供电方案；TAP cfg 不提供",
+      "blocks_research_model": "yes",
+      "blocking_condition": "DC/ET 研究运行",
+      "evidence_locator": "data/tap_50x50/multigpu.yaml:4; design/v2.py:254",
+      "candidate_parameter_ids": [
+        "electrical.nominal_voltage"
+      ],
+      "candidate_source_ids": [
+        "local_layout"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G06",
+      "parameter": "P/G bump map 和负载分配",
+      "current_evidence_value": "null",
+      "required_information": "实际 bump assignment 或明确批准的合成生成规则",
+      "unit": "m;A",
+      "affected_backends": "electrical;ET",
+      "impact": "无实际负载与回流端点",
+      "available_source": "用户 bump/netlist；合成时独立标注",
+      "blocks_research_model": "yes",
+      "blocking_condition": "bump-level 研究模型",
+      "evidence_locator": "cases/grid.py:251; builders/dc_v2.py:435",
+      "candidate_parameter_ids": [
+        "pg.bump_assignment"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G07",
+      "parameter": "package 源/回流位置及有限阻抗",
+      "current_evidence_value": "null",
+      "required_information": "source/terminal 坐标及 R/ground policy",
+      "unit": "m;ohm",
+      "affected_backends": "electrical;ET",
+      "impact": "不能验证真实供电闭环",
+      "available_source": "电源入口/C4/substrate 等效模型",
+      "blocks_research_model": "yes",
+      "blocking_condition": "DC 研究模型",
+      "evidence_locator": "builders/dc_v2.py:189",
+      "candidate_parameter_ids": [
+        "pg.source_and_return"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G08",
+      "parameter": "front/back RDL 几何与材料",
+      "current_evidence_value": "null",
+      "required_information": "长度/宽/厚/并联数或明确等效 Rxy；路径与 material_id",
+      "unit": "m;ohm",
+      "affected_backends": "electrical;thermal",
+      "impact": "压降/局部 R(T)/热损耗无来源",
+      "available_source": "实际 routing/stackup 或经批准等效模型",
+      "blocks_research_model": "yes",
+      "blocking_condition": "DC/R(T) 研究模型",
+      "evidence_locator": "design/v2.py:173; builders/electrical.py:91",
+      "candidate_parameter_ids": [
+        "electrical.rdl_line_width",
+        "electrical.rdl_metal_thickness"
+      ],
+      "candidate_source_ids": [
+        "local_iccad"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G09",
+      "parameter": "固定 P/G 真孔数量/布局预算",
+      "current_evidence_value": "null",
+      "required_information": "各 rail 的 Np/Ng、固定孔和可选孔清单",
+      "unit": "count",
+      "affected_backends": "all",
+      "impact": "不能执行同资源比较",
+      "available_source": "用户布局/资源预算；不能由候选格数推断",
+      "blocks_research_model": "yes",
+      "blocking_condition": "任何同数量位置对照",
+      "evidence_locator": "candidates/types.py:56",
+      "candidate_parameter_ids": [
+        "pg.counts_per_rail"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G10",
+      "parameter": "单孔直径与高度",
+      "current_evidence_value": "null",
+      "required_information": "每种孔 d/L 和尺寸不变规则",
+      "unit": "m",
+      "affected_backends": "all",
+      "impact": "R/ΔG/铜体积均未知",
+      "available_source": "实际技术；旧 legacy/Blackwell 常数不可继承",
+      "blocks_research_model": "yes",
+      "blocking_condition": "研究三场建模",
+      "evidence_locator": "candidates/physics.py:29",
+      "candidate_parameter_ids": [
+        "via.diameter",
+        "via.height"
+      ],
+      "candidate_source_ids": [
+        "local_iccad",
+        "tap_thermal"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G11",
+      "parameter": "宏内逐孔位置/身份/端点",
+      "current_evidence_value": "仅宏 footprint/site；无逐孔列表",
+      "required_information": "via_id/rail/xy/z/端点及宏内 P/G 排列",
+      "unit": "m",
+      "affected_backends": "all",
+      "impact": "聚合宏无法生成同一力学几何",
+      "available_source": "用户阵列规则或明确批准的 realization",
+      "blocks_research_model": "yes",
+      "blocking_condition": "同一真实结构及机械几何",
+      "evidence_locator": "candidates/types.py:117; builders/dc_v2.py:468",
+      "candidate_parameter_ids": [
+        "pg.layout"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G12",
+      "parameter": "衬层/阻挡层与基体扣孔",
+      "current_evidence_value": "null",
+      "required_information": "衬层材料/厚度、互斥域及端接方式",
+      "unit": "m",
+      "affected_backends": "thermal;mechanical",
+      "impact": "局部热阻与失配应力不能定量",
+      "available_source": "工艺/CAD/材料资料",
+      "blocks_research_model": "yes",
+      "blocking_condition": "硅 TSV 显式小模型",
+      "evidence_locator": "thermal_v2/geometry.py:19",
+      "candidate_parameter_ids": [
+        "via.liner"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G13",
+      "parameter": "孔间距/禁布区/固定信号结构",
+      "current_evidence_value": "只有计算的芯粒通信 ring",
+      "required_information": "工艺间距、禁布、固定金属/信号孔/机械结构",
+      "unit": "m",
+      "affected_backends": "all",
+      "impact": "合法性与背景铜量不完整",
+      "available_source": "现有几何/封装约束",
+      "blocks_research_model": "yes",
+      "blocking_condition": "研究孔布局冻结",
+      "evidence_locator": "tests/unit/test_tap_50x50_cases.py:92",
+      "candidate_parameter_ids": [
+        "via.density_scale"
+      ],
+      "candidate_source_ids": [
+        "tap_thermal"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G14",
+      "parameter": "电阻率/TCR/各自参考温度",
+      "current_evidence_value": "TAP=null；他例有参数",
+      "required_information": "分材料 rho_e/alpha_R/T_R 及有效温区",
+      "unit": "ohm*m;1/K;K",
+      "affected_backends": "electrical;ET",
+      "impact": "无法可信计算温度修正",
+      "available_source": "有来源材料表/测量；禁止使用 TAP 热 resistivity_Cu",
+      "blocks_research_model": "yes",
+      "blocking_condition": "R(T) 模型",
+      "evidence_locator": "builders/electrical.py:29; thermal_v2/mapping.py:270",
+      "candidate_parameter_ids": [
+        "electrical.copper_resistivity",
+        "electrical.tcr"
+      ],
+      "candidate_source_ids": [
+        "local_iccad"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G15",
+      "parameter": "电接触/封装/微凸点寄生",
+      "current_evidence_value": "TAP=null",
+      "required_information": "各路径 Rc 及温度政策、聚合范围",
+      "unit": "ohm",
+      "affected_backends": "electrical;ET",
+      "impact": "接触损耗/温度作用无法分离",
+      "available_source": "实际寄生/接触测试或显式假设",
+      "blocks_research_model": "yes",
+      "blocking_condition": "研究 DC/ET 范围包含这些路径时",
+      "evidence_locator": "candidates/types.py:64; design/v2.py:200",
+      "candidate_parameter_ids": [
+        "pg.source_and_return"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G16",
+      "parameter": "芯粒热源空间与耗散层",
+      "current_evidence_value": "755 W nominal；仅 2D body",
+      "required_information": "热源面积/体积映射、耗散 z/厚度；均匀假设审批",
+      "unit": "W;m;W/m^3",
+      "affected_backends": "thermal;ET",
+      "impact": "热源不能复制 bump map 或重复施加",
+      "available_source": "TAP nominal + 用户热源/芯片资料",
+      "blocks_research_model": "yes",
+      "blocking_condition": "研究热模型",
+      "evidence_locator": "thermal_v2/builder.py:357",
+      "candidate_parameter_ids": [
+        "case.nominal_powers"
+      ],
+      "candidate_source_ids": [
+        "tap_cfg"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G17",
+      "parameter": "各实体热导/各向异性",
+      "current_evidence_value": "TAP=null",
+      "required_information": "k_x/k_y/k_z、温区与等效依据",
+      "unit": "W/(m*K)",
+      "affected_backends": "thermal;ET",
+      "impact": "导热路径未知",
+      "available_source": "材料数据/公开来源/经验证等效层",
+      "blocks_research_model": "yes",
+      "blocking_condition": "热研究运行",
+      "evidence_locator": "thermal_v2/types.py:83",
+      "candidate_parameter_ids": [
+        "thermal.k_copper",
+        "thermal.k_silicon",
+        "thermal.k_underfill",
+        "thermal.k_tim"
+      ],
+      "candidate_source_ids": [
+        "tap_thermal"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G18",
+      "parameter": "热界面与接触",
+      "current_evidence_value": "TAP=null",
+      "required_information": "TIM/粘结/衬层等热阻及是否已含于等效边界",
+      "unit": "m^2*K/W",
+      "affected_backends": "thermal",
+      "impact": "可能重复施加同一散热路径热阻",
+      "available_source": "结构与界面测量/显式来源",
+      "blocks_research_model": "yes",
+      "blocking_condition": "热研究运行",
+      "evidence_locator": "thermal_v2/types.py:115",
+      "candidate_parameter_ids": [
+        "thermal.contacts"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G19",
+      "parameter": "环境/顶部底部侧面热边界",
+      "current_evidence_value": "TAP=null",
+      "required_information": "ambient、h/固定 T/热流及空间作用面",
+      "unit": "K;W/(m^2*K);W",
+      "affected_backends": "thermal;mechanical-mapping",
+      "impact": "温度与位置敏感性不确定",
+      "available_source": "实际冷却条件/用户既有热模型",
+      "blocks_research_model": "yes",
+      "blocking_condition": "热研究运行",
+      "evidence_locator": "thermal_v2/types.py:131",
+      "candidate_parameter_ids": [
+        "thermal.ambient",
+        "thermal.cooling_geometry",
+        "thermal.convection_resistance"
+      ],
+      "candidate_source_ids": [
+        "tap_hotspot",
+        "tap_thermal"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G20",
+      "parameter": "背景固定金属与可变孔铜量分账",
+      "current_evidence_value": "TAP=null；现有 ΔG 为替换增量",
+      "required_information": "固定金属是否已等效、可变孔贡献和铜体积账",
+      "unit": "m^3",
+      "affected_backends": "thermal;mechanical",
+      "impact": "可能双算铜导热/缺固定结构",
+      "available_source": "层叠/金属密度/CAD；现有宏公式可复用",
+      "blocks_research_model": "yes",
+      "blocking_condition": "几何/导热资源一致性声明",
+      "evidence_locator": "candidates/physics.py:65; thermal_v2/builder.py:201",
+      "candidate_parameter_ids": [
+        "via.density_scale"
+      ],
+      "candidate_source_ids": [
+        "tap_thermal"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G21",
+      "parameter": "load_power_policy",
+      "current_evidence_value": "legacy 固定 I、固定名义 heat；无显式 TAP policy",
+      "required_information": "prescribed_heat_nominal_current 或经确认 actual-IV/constant-power",
+      "unit": "enum",
+      "affected_backends": "electrical;thermal;ET",
+      "impact": "实际 IV 与热源不一致",
+      "available_source": "研究工况定义及现有旧政策保留",
+      "blocks_research_model": "yes",
+      "blocking_condition": "研究对照前",
+      "evidence_locator": "cases/grid.py:350; evidence/numerical_probes.json",
+      "candidate_parameter_ids": [
+        "case.nominal_powers",
+        "policy.load_heat"
+      ],
+      "candidate_source_ids": [
+        "tap_cfg"
+      ],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G22",
+      "parameter": "损耗热归属/外部损耗",
+      "current_evidence_value": "无 heat_accounting_scope",
+      "required_information": "每支路 die-included/internal/external 和 external_loss",
+      "unit": "W;enum",
+      "affected_backends": "ET",
+      "impact": "无法排除重复计热或域外热错投",
+      "available_source": "芯片功率定义+支路空间路径",
+      "blocks_research_model": "yes",
+      "blocking_condition": "严格电热能量闭合",
+      "evidence_locator": "thermal_v2/mapping.py:113",
+      "candidate_parameter_ids": [
+        "policy.load_heat"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G23",
+      "parameter": "固定点/数值质量阈值及最终状态",
+      "current_evidence_value": "仅温度 tol；v1 有过早停止反例",
+      "required_information": "raw ΔT、ΔV、KCL/KVL、功率残差、最终复算与失败政策",
+      "unit": "K;V;A;W",
+      "affected_backends": "electrical;thermal;ET",
+      "impact": "converged 不足以证明同状态可靠性",
+      "available_source": "分析目标/数值误差预算；本轮反例",
+      "blocks_research_model": "yes",
+      "blocking_condition": "严格闭环模型验收",
+      "evidence_locator": "analysis/electrothermal.py:431; thermal_v2/electrothermal.py:159",
+      "candidate_parameter_ids": [],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G24",
+      "parameter": "力学刚度与泊松比",
+      "current_evidence_value": "null",
+      "required_information": "每实体 E/nu 或 Cijkl；硅晶向或等向声明",
+      "unit": "Pa;dimensionless",
+      "affected_backends": "mechanical",
+      "impact": "无法组装真实线弹性模型",
+      "available_source": "材料表/实际封装资料/晶向定义",
+      "blocks_research_model": "yes",
+      "blocking_condition": "任何机械求解",
+      "evidence_locator": "design/types.py:91; no mechanics implementation",
+      "candidate_parameter_ids": [
+        "mechanical.stiffness"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G25",
+      "parameter": "CTE/热应变模型",
+      "current_evidence_value": "null",
+      "required_information": "各材料 CTE(T)，切线/割线约定和温区",
+      "unit": "1/K",
+      "affected_backends": "mechanical",
+      "impact": "不能计算热膨胀/失配应力",
+      "available_source": "材料资料/测量/明确近似",
+      "blocks_research_model": "yes",
+      "blocking_condition": "任何热机械求解",
+      "evidence_locator": "no mechanical material contract",
+      "candidate_parameter_ids": [
+        "mechanical.cte"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G26",
+      "parameter": "无应力参考状态 T_sf",
+      "current_evidence_value": "null",
+      "required_information": "模型无热应变参考温度及来源",
+      "unit": "K",
+      "affected_backends": "mechanical",
+      "impact": "不能用环境温度或 T_R 无声代替",
+      "available_source": "装配/参考状态模型定义",
+      "blocks_research_model": "yes",
+      "blocking_condition": "任何热应力求解",
+      "evidence_locator": "TAP25D_ETM_Modeling_Design_for_Codex.md §8",
+      "candidate_parameter_ids": [
+        "mechanical.reference_state"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G27",
+      "parameter": "机械支撑/载荷/刚体自由度处理",
+      "current_evidence_value": "null",
+      "required_information": "具名机械 BC、安装条件、仅消刚体或实际固定",
+      "unit": "m;N;Pa",
+      "affected_backends": "mechanical",
+      "impact": "全底固定可制造伪应力",
+      "available_source": "实际安装/用户已有 COMSOL 模型",
+      "blocks_research_model": "yes",
+      "blocking_condition": "机械求解",
+      "evidence_locator": "no mechanics boundary contract",
+      "candidate_parameter_ids": [
+        "mechanical.boundaries"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G28",
+      "parameter": "机械界面/TIM/underfill 连接",
+      "current_evidence_value": "null",
+      "required_information": "粘结/接触及软层本构的明确首版处理",
+      "unit": "enum;Pa",
+      "affected_backends": "mechanical",
+      "impact": "域连接与失配载荷未知",
+      "available_source": "结构/材料/显式理想粘结假设",
+      "blocks_research_model": "yes",
+      "blocking_condition": "机械求解",
+      "evidence_locator": "no interface/solid-domain model",
+      "candidate_parameter_ids": [
+        "mechanical.boundaries"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G29",
+      "parameter": "热场到机械域转移",
+      "current_evidence_value": "null",
+      "required_information": "公共 z/region ID、插值覆盖、界面规则与域外失败",
+      "unit": "K;m",
+      "affected_backends": "thermal;mechanical",
+      "impact": "不能默认室温填空或跨材料混合",
+      "available_source": "共享几何+真实后端节点/单元文件",
+      "blocks_research_model": "yes",
+      "blocking_condition": "非均匀热载荷机械求解",
+      "evidence_locator": "thermal_v2/types.py; no thermal-to-mechanics adapter",
+      "candidate_parameter_ids": [
+        "mechanical.transfer_roi"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G30",
+      "parameter": "真实机械后端/COMSOL 能力",
+      "current_evidence_value": "本机命令/模型/适配器未发现",
+      "required_information": "实际主机/安装路径/版本/模块许可/批处理/已有模型",
+      "unit": "path;version",
+      "affected_backends": "mechanical",
+      "impact": "P4 实际求解阻塞",
+      "available_source": "用户 COMSOL 环境；当前探测记录",
+      "blocks_research_model": "yes",
+      "blocking_condition": "真实力学求解；接口可独立完成",
+      "evidence_locator": "evidence/environment.json",
+      "candidate_parameter_ids": [
+        "mechanical.backend"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G31",
+      "parameter": "应力指标/ROI/coverage",
+      "current_evidence_value": "null",
+      "required_information": "ROI 材料/体积、raw max/p99/mean、Scrit、warpage 基准",
+      "unit": "Pa;m",
+      "affected_backends": "mechanical;ETM-result",
+      "impact": "局部峰值不能称全系统最大或安全",
+      "available_source": "研究目标+真实几何选择",
+      "blocks_research_model": "yes",
+      "blocking_condition": "定量报告及布局对照",
+      "evidence_locator": "no mechanics result contract",
+      "candidate_parameter_ids": [
+        "mechanical.transfer_roi"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G32",
+      "parameter": "独立热/力参考与三档收敛",
+      "current_evidence_value": "只有合成解析/守恒/reference arrays",
+      "required_information": "真实参考温度/应力、网格和域大小收敛及误差预算",
+      "unit": "K;Pa;m",
+      "affected_backends": "thermal;mechanical",
+      "impact": "不能标 cross_validated 或声称小位置收益",
+      "available_source": "实际 COMSOL/独立求解器/细网格结果",
+      "blocks_research_model": "conditional",
+      "blocking_condition": "cross-validation/位置收益结论；不阻塞诚实低等级 fixture",
+      "evidence_locator": "calibration/reference.py; tests/unit/test_calibration_v2_reference.py",
+      "candidate_parameter_ids": [],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G33",
+      "parameter": "电流密度/容量与材料允许应力",
+      "current_evidence_value": "TAP=null",
+      "required_information": "J_limit；需要安全结论时 sigma_allow/温区",
+      "unit": "A/m^2;Pa",
+      "affected_backends": "electrical;mechanical",
+      "impact": "不能声称无过流/无屈服/寿命可靠",
+      "available_source": "工艺额定/材料允许值",
+      "blocks_research_model": "conditional",
+      "blocking_condition": "安全可行性判定；仅报告场值不必补假阈值",
+      "evidence_locator": "design/v2.py:274; candidates/types.py:68",
+      "candidate_parameter_ids": [
+        "limits.current_and_stress"
+      ],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G34",
+      "parameter": "版本化缓存及观测定义",
+      "current_evidence_value": "compile/fresh hash 部分覆盖",
+      "required_information": "solver/backend 版本、实体几何、BC、policy、网格、ROI hash",
+      "unit": "hash",
+      "affected_backends": "all",
+      "impact": "旧结果可能被误作同物理问题",
+      "available_source": "扩展现有 manifest/fingerprint",
+      "blocks_research_model": "yes",
+      "blocking_condition": "研究结果追溯与跨场缓存复用",
+      "evidence_locator": "cases/compiler.py:100; optimization/constraints_v2.py:599",
+      "candidate_parameter_ids": [],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G35",
+      "parameter": "资源预算",
+      "current_evidence_value": "电网 250×250/plane；热 50×50/layer",
+      "required_information": "已确认 rails/layers 后 nnz/LU/峰值内存；机械 DOF 上限",
+      "unit": "count;byte",
+      "affected_backends": "all",
+      "impact": "完整构建成本未知",
+      "available_source": "现有 preflight + 目标环境内存/网格选择",
+      "blocks_research_model": "conditional",
+      "blocking_condition": "完整规模构建前",
+      "evidence_locator": "ETM_CASE_PHYSICAL_SUMMARY.md",
+      "candidate_parameter_ids": [],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    },
+    {
+      "gap_id": "G36",
+      "parameter": "关键参数来源/审批/有效范围",
+      "current_evidence_value": "TAP 平面来源完整；物理参数未建立",
+      "required_information": "value/unit/source_locator/role/calibration/approval/validity",
+      "unit": "metadata",
+      "affected_backends": "all",
+      "impact": "不能把其他 case 历史批准转移到 TAP",
+      "available_source": "用户材料/公开原文/测量或显式确认",
+      "blocks_research_model": "yes",
+      "blocking_condition": "research_assumption_model 分级前",
+      "evidence_locator": "design/v2.py:62; ETM_IMPLEMENTATION_AUDIT.md §1",
+      "candidate_parameter_ids": [],
+      "candidate_source_ids": [],
+      "resolution_status": "open",
+      "note": "候选来源不自动关闭缺口；原字段保留历史。"
+    }
+  ]
+}

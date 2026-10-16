@@ -1,0 +1,12 @@
+layer0
+Cells: 36     Area: 2500.000000     Ave_Length: 8.333333     Height: 27.500000     Conductance: 0.012594     
+
+layer1
+Cells: 36     Area: 2500.000000     Ave_Length: 8.333333     Height: 27.500000     Conductance: 0.012594     
+
+layer2
+Cells: 36     Area: 2500.000000     Ave_Length: 8.333333     Height: 27.500000     Conductance: 0.012594     
+
+layer3
+Cells: 36     Area: 2500.000000     Ave_Length: 8.333333     Height: 27.500000     Conductance: 0.012594     
+

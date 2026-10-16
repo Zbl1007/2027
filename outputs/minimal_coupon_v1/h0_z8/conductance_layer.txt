@@ -1,0 +1,24 @@
+layer0
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 12.500000     Conductance: 1040.000000     
+
+layer1
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 12.500000     Conductance: 1040.000000     
+
+layer2
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 12.500000     Conductance: 1040.000000     
+
+layer3
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 12.500000     Conductance: 1040.000000     
+
+layer4
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 12.500000     Conductance: 1040.000000     
+
+layer5
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 12.500000     Conductance: 1040.000000     
+
+layer6
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 12.500000     Conductance: 1040.000000     
+
+layer7
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 12.500000     Conductance: 1040.000000     
+

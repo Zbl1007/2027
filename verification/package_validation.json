@@ -1,0 +1,9 @@
+{
+  "archive": "deliverables/3dice_comsol_minimal_v1.zip",
+  "sha256": "d170f312c117ab726c06e26aada668b87b815df4b07df0b019489cbb157611f6",
+  "verified_hashed_files": 128,
+  "zip_crc_pass": true,
+  "portable_importer_rejects_unrun_template": true,
+  "contains_mph": false,
+  "status": "pass"
+}

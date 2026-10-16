@@ -1,0 +1,11 @@
+.....................................................                    [100%]
+=============================== warnings summary ===============================
+tests/golden/test_thermal_analytic.py: 9 warnings
+tests/golden/test_thermal_v2_analytic.py: 4 warnings
+tests/golden/test_electrothermal_fixed_point.py: 5 warnings
+tests/golden/test_electrothermal_v2.py: 5 warnings
+  /Users/zbl/Desktop/docker/code/mypdn/OpSimulation.py:263: SparseEfficiencyWarning: splu converted its input to CSC format
+    self.LU = splu(G)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+53 passed, 23 warnings in 3.52s

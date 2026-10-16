@@ -1,0 +1,48 @@
+layer0
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer1
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer2
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer3
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer4
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer5
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer6
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer7
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer8
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer9
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer10
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer11
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer12
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer13
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer14
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+
+layer15
+Cells: 1     Area: 100000000.000000     Ave_Length: 10000.000000     Height: 6.250000     Conductance: 2080.000000     
+

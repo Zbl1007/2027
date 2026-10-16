@@ -1,0 +1,62 @@
+si_bottom:
+ position 0, 0;
+ dimension 50, 19;
+ material silicon;
+ discretization 2, 2;
+ power values 0.00013062500000000002;
+
+si_top:
+ position 0, 31;
+ dimension 50, 19;
+ material silicon;
+ discretization 2, 2;
+ power values 0.00013062500000000002;
+
+si_left:
+ position 0, 19;
+ dimension 19, 12;
+ material silicon;
+ discretization 2, 2;
+ power values 3.1350000000000003e-05;
+
+si_right:
+ position 31, 19;
+ dimension 19, 12;
+ material silicon;
+ discretization 2, 2;
+ power values 3.1350000000000003e-05;
+
+ox_bottom:
+ position 19, 19;
+ dimension 12, 0.99999999999999978;
+ material silica;
+ discretization 2, 2;
+ power values 0;
+
+ox_top:
+ position 19, 30;
+ dimension 12, 0.99999999999999978;
+ material silica;
+ discretization 2, 2;
+ power values 0;
+
+ox_left:
+ position 19, 20;
+ dimension 0.99999999999999978, 10;
+ material silica;
+ discretization 2, 2;
+ power values 0;
+
+ox_right:
+ position 30, 20;
+ dimension 0.99999999999999978, 10;
+ material silica;
+ discretization 2, 2;
+ power values 0;
+
+cu_core:
+ position 20, 20;
+ dimension 10, 10;
+ material copper;
+ discretization 2, 2;
+ power values 0;

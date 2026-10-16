@@ -1,0 +1,37 @@
+﻿gap_id,parameter,current_evidence_value,required_information,unit,affected_backends,impact,available_source,blocks_research_model,blocking_condition,evidence_locator
+G01,案例版本/尺寸来源,现有 50×50 mm 派生布局；GPU18×18/HBM12×8,确认沿用派生版或另建官方尺寸版本,mm,all,不能混用两套几何,现有 YAML + 固定 TAP cfg,yes,研究模型身份冻结前,data/tap_50x50/multigpu.yaml; evidence/upstream_sys_multigpu.cfg
+G02,坐标/朝向及 bump 同步变换,左下角；无 orientation,显式朝向及局部坐标变换约定,deg;m,all,body/bump/via 可能不一致,现有布局及用户确认,yes,涉及旋转或声明统一几何时,cases/parser.py:98; design/v2.py:153
+G03,封装技术选择,null；仅 workload/floorplan,独立 silicon_interposer 或明确 CoWoS-L-like profile,enum,all,不能确定基体及工艺,用户封装方案/已有工艺资料,yes,任何三场研究 evaluate,data/tap_50x50/multigpu.yaml:3
+G04,公共层叠 z/厚度/实体包络,TAP case=null,substrate/C4/underfill/RDL/interposer/bump/die/TIM/lid 的确认层叠,m,all,无法共享三维几何或接触,用户结构/CAD/有页码的公开工艺数据,yes,构建研究几何前,thermal_v2/types.py:83
+G05,电源 rail/return/Vnom,legacy vdd=1；无 supply pairs,批准的 rail 电压与共享/独立回流关系,V,electrical;ET,I=P/V 及局部压降基准未知,实际供电方案；TAP cfg 不提供,yes,DC/ET 研究运行,data/tap_50x50/multigpu.yaml:4; design/v2.py:254
+G06,P/G bump map 和负载分配,null,实际 bump assignment 或明确批准的合成生成规则,m;A,electrical;ET,无实际负载与回流端点,用户 bump/netlist；合成时独立标注,yes,bump-level 研究模型,cases/grid.py:251; builders/dc_v2.py:435
+G07,package 源/回流位置及有限阻抗,null,source/terminal 坐标及 R/ground policy,m;ohm,electrical;ET,不能验证真实供电闭环,电源入口/C4/substrate 等效模型,yes,DC 研究模型,builders/dc_v2.py:189
+G08,front/back RDL 几何与材料,null,长度/宽/厚/并联数或明确等效 Rxy；路径与 material_id,m;ohm,electrical;thermal,压降/局部 R(T)/热损耗无来源,实际 routing/stackup 或经批准等效模型,yes,DC/R(T) 研究模型,design/v2.py:173; builders/electrical.py:91
+G09,固定 P/G 真孔数量/布局预算,null,各 rail 的 Np/Ng、固定孔和可选孔清单,count,all,不能执行同资源比较,用户布局/资源预算；不能由候选格数推断,yes,任何同数量位置对照,candidates/types.py:56
+G10,单孔直径与高度,null,每种孔 d/L 和尺寸不变规则,m,all,R/ΔG/铜体积均未知,实际技术；旧 legacy/Blackwell 常数不可继承,yes,研究三场建模,candidates/physics.py:29
+G11,宏内逐孔位置/身份/端点,仅宏 footprint/site；无逐孔列表,via_id/rail/xy/z/端点及宏内 P/G 排列,m,all,聚合宏无法生成同一力学几何,用户阵列规则或明确批准的 realization,yes,同一真实结构及机械几何,candidates/types.py:117; builders/dc_v2.py:468
+G12,衬层/阻挡层与基体扣孔,null,衬层材料/厚度、互斥域及端接方式,m,thermal;mechanical,局部热阻与失配应力不能定量,工艺/CAD/材料资料,yes,硅 TSV 显式小模型,thermal_v2/geometry.py:19
+G13,孔间距/禁布区/固定信号结构,只有计算的芯粒通信 ring,工艺间距、禁布、固定金属/信号孔/机械结构,m,all,合法性与背景铜量不完整,现有几何/封装约束,yes,研究孔布局冻结,tests/unit/test_tap_50x50_cases.py:92
+G14,电阻率/TCR/各自参考温度,TAP=null；他例有参数,分材料 rho_e/alpha_R/T_R 及有效温区,ohm*m;1/K;K,electrical;ET,无法可信计算温度修正,有来源材料表/测量；禁止使用 TAP 热 resistivity_Cu,yes,R(T) 模型,builders/electrical.py:29; thermal_v2/mapping.py:270
+G15,电接触/封装/微凸点寄生,TAP=null,各路径 Rc 及温度政策、聚合范围,ohm,electrical;ET,接触损耗/温度作用无法分离,实际寄生/接触测试或显式假设,yes,研究 DC/ET 范围包含这些路径时,candidates/types.py:64; design/v2.py:200
+G16,芯粒热源空间与耗散层,755 W nominal；仅 2D body,热源面积/体积映射、耗散 z/厚度；均匀假设审批,W;m;W/m^3,thermal;ET,热源不能复制 bump map 或重复施加,TAP nominal + 用户热源/芯片资料,yes,研究热模型,thermal_v2/builder.py:357
+G17,各实体热导/各向异性,TAP=null,k_x/k_y/k_z、温区与等效依据,W/(m*K),thermal;ET,导热路径未知,材料数据/公开来源/经验证等效层,yes,热研究运行,thermal_v2/types.py:83
+G18,热界面与接触,TAP=null,TIM/粘结/衬层等热阻及是否已含于等效边界,m^2*K/W,thermal,可能重复施加同一散热路径热阻,结构与界面测量/显式来源,yes,热研究运行,thermal_v2/types.py:115
+G19,环境/顶部底部侧面热边界,TAP=null,ambient、h/固定 T/热流及空间作用面,K;W/(m^2*K);W,thermal;mechanical-mapping,温度与位置敏感性不确定,实际冷却条件/用户既有热模型,yes,热研究运行,thermal_v2/types.py:131
+G20,背景固定金属与可变孔铜量分账,TAP=null；现有 ΔG 为替换增量,固定金属是否已等效、可变孔贡献和铜体积账,m^3,thermal;mechanical,可能双算铜导热/缺固定结构,层叠/金属密度/CAD；现有宏公式可复用,yes,几何/导热资源一致性声明,candidates/physics.py:65; thermal_v2/builder.py:201
+G21,load_power_policy,legacy 固定 I、固定名义 heat；无显式 TAP policy,prescribed_heat_nominal_current 或经确认 actual-IV/constant-power,enum,electrical;thermal;ET,实际 IV 与热源不一致,研究工况定义及现有旧政策保留,yes,研究对照前,cases/grid.py:350; evidence/numerical_probes.json
+G22,损耗热归属/外部损耗,无 heat_accounting_scope,每支路 die-included/internal/external 和 external_loss,W;enum,ET,无法排除重复计热或域外热错投,芯片功率定义+支路空间路径,yes,严格电热能量闭合,thermal_v2/mapping.py:113
+G23,固定点/数值质量阈值及最终状态,仅温度 tol；v1 有过早停止反例,raw ΔT、ΔV、KCL/KVL、功率残差、最终复算与失败政策,K;V;A;W,electrical;thermal;ET,converged 不足以证明同状态可靠性,分析目标/数值误差预算；本轮反例,yes,严格闭环模型验收,analysis/electrothermal.py:431; thermal_v2/electrothermal.py:159
+G24,力学刚度与泊松比,null,每实体 E/nu 或 Cijkl；硅晶向或等向声明,Pa;dimensionless,mechanical,无法组装真实线弹性模型,材料表/实际封装资料/晶向定义,yes,任何机械求解,design/types.py:91; no mechanics implementation
+G25,CTE/热应变模型,null,各材料 CTE(T)，切线/割线约定和温区,1/K,mechanical,不能计算热膨胀/失配应力,材料资料/测量/明确近似,yes,任何热机械求解,no mechanical material contract
+G26,无应力参考状态 T_sf,null,模型无热应变参考温度及来源,K,mechanical,不能用环境温度或 T_R 无声代替,装配/参考状态模型定义,yes,任何热应力求解,TAP25D_ETM_Modeling_Design_for_Codex.md §8
+G27,机械支撑/载荷/刚体自由度处理,null,具名机械 BC、安装条件、仅消刚体或实际固定,m;N;Pa,mechanical,全底固定可制造伪应力,实际安装/用户已有 COMSOL 模型,yes,机械求解,no mechanics boundary contract
+G28,机械界面/TIM/underfill 连接,null,粘结/接触及软层本构的明确首版处理,enum;Pa,mechanical,域连接与失配载荷未知,结构/材料/显式理想粘结假设,yes,机械求解,no interface/solid-domain model
+G29,热场到机械域转移,null,公共 z/region ID、插值覆盖、界面规则与域外失败,K;m,thermal;mechanical,不能默认室温填空或跨材料混合,共享几何+真实后端节点/单元文件,yes,非均匀热载荷机械求解,thermal_v2/types.py; no thermal-to-mechanics adapter
+G30,真实机械后端/COMSOL 能力,本机命令/模型/适配器未发现,实际主机/安装路径/版本/模块许可/批处理/已有模型,path;version,mechanical,P4 实际求解阻塞,用户 COMSOL 环境；当前探测记录,yes,真实力学求解；接口可独立完成,evidence/environment.json
+G31,应力指标/ROI/coverage,null,ROI 材料/体积、raw max/p99/mean、Scrit、warpage 基准,Pa;m,mechanical;ETM-result,局部峰值不能称全系统最大或安全,研究目标+真实几何选择,yes,定量报告及布局对照,no mechanics result contract
+G32,独立热/力参考与三档收敛,只有合成解析/守恒/reference arrays,真实参考温度/应力、网格和域大小收敛及误差预算,K;Pa;m,thermal;mechanical,不能标 cross_validated 或声称小位置收益,实际 COMSOL/独立求解器/细网格结果,conditional,cross-validation/位置收益结论；不阻塞诚实低等级 fixture,calibration/reference.py; tests/unit/test_calibration_v2_reference.py
+G33,电流密度/容量与材料允许应力,TAP=null,J_limit；需要安全结论时 sigma_allow/温区,A/m^2;Pa,electrical;mechanical,不能声称无过流/无屈服/寿命可靠,工艺额定/材料允许值,conditional,安全可行性判定；仅报告场值不必补假阈值,design/v2.py:274; candidates/types.py:68
+G34,版本化缓存及观测定义,compile/fresh hash 部分覆盖,solver/backend 版本、实体几何、BC、policy、网格、ROI hash,hash,all,旧结果可能被误作同物理问题,扩展现有 manifest/fingerprint,yes,研究结果追溯与跨场缓存复用,cases/compiler.py:100; optimization/constraints_v2.py:599
+G35,资源预算,电网 250×250/plane；热 50×50/layer,已确认 rails/layers 后 nnz/LU/峰值内存；机械 DOF 上限,count;byte,all,完整构建成本未知,现有 preflight + 目标环境内存/网格选择,conditional,完整规模构建前,ETM_CASE_PHYSICAL_SUMMARY.md
+G36,关键参数来源/审批/有效范围,TAP 平面来源完整；物理参数未建立,value/unit/source_locator/role/calibration/approval/validity,metadata,all,不能把其他 case 历史批准转移到 TAP,用户材料/公开原文/测量或显式确认,yes,research_assumption_model 分级前,design/v2.py:62; ETM_IMPLEMENTATION_AUDIT.md §1

@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/Zbl1007/3d-ice",
+  "commit": "4953952a1ef6d38807ff307212a6f15e5b2ef935",
+  "version": "4.0.0",
+  "checked_on": "2026-10-16",
+  "checkout": "external/3d-ice",
+  "files": {
+    "README.md": "f79a741b64658d3bb13b892393f78dff787f99284de51f66cb52ba9ef5543f7b",
+    "makefile.def": "17b11c8448830c362efc653b5d05cdb160d3f263510898160534f8beae409fd1",
+    "test/solid/steady/topsink.stk": "a8d7b3ec906a89d9995176928579012353bd7d626751c89dd2a4e9bee3f3fea1",
+    "test/background.flp": "2a860307076c1c5257227ca4a9cd59c5c02c2c75de4b33149cc8e0a6c709daf1",
+    "doc/3D-ICE-User_Guide.docx": "ed19c15ce55992381cc8c0762d5ea1cb07481153b4e26c54631a6a537697c9ed",
+    "bison/floorplan_parser.y": "f7e680348de5d42edb001993fa51a1553af8f193c2856d2459f6d8921dbfdb78",
+    "sources/thermal_data.c": "32ef8361c46add3bb9c7bfb63691ee31df67f1503a420ccc63ce15f1b8c54094"
+  }
+}

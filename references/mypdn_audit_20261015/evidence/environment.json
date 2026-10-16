@@ -1,0 +1,41 @@
+{
+  "python": "/tmp/mypdn-etm-p0-20261015-venv/bin/python",
+  "python_version": "3.11.13 (main, Jun  5 2025, 08:14:07) [Clang 14.0.6 ]",
+  "platform": "macOS-10.16-x86_64-i386-64bit",
+  "machine": "x86_64",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "torch": "2.2.2",
+    "yaml": "6.0.3",
+    "pytest": "9.0.2",
+    "matplotlib": "3.10.8",
+    "networkx": "3.6.1"
+  },
+  "cuda_available": false,
+  "backend_commands": {
+    "comsol": null,
+    "comsolbatch": null,
+    "3D-ICE": null,
+    "3d-ice": null,
+    "ccx": null,
+    "ElmerSolver": null,
+    "FreeFem++": null
+  },
+  "mechanics_packages": {
+    "mph": false,
+    "dolfin": false,
+    "dolfinx": false,
+    "sfepy": false,
+    "meshio": false,
+    "gmsh": false
+  },
+  "comsol_install_directory_matches": {
+    "/Applications": [],
+    "/Users/zbl/Applications": [],
+    "/opt": [],
+    "/usr/local": []
+  },
+  "comsol_license_status": "not_verified_no_local_executable_found",
+  "scope": "local host PATH and listed installation roots; no remote host or license checkout"
+}

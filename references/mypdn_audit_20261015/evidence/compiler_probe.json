@@ -1,0 +1,8 @@
+{
+  "fidelity": "synthetic_fixture",
+  "cache_miss_first": true,
+  "cache_hit_second": true,
+  "hashes_equal": true,
+  "load_compiled_artifacts_succeeded": true,
+  "compiler_grid_cells": 20
+}

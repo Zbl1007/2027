@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-16T08:15:00.160229+00:00",
+  "status": "pass",
+  "scope": "snapshot_and_provenance_integrity_only",
+  "snapshot_count": 57,
+  "source_count": 8,
+  "parameter_count": 41,
+  "candidate_count": 28,
+  "audit_gap_count": 36,
+  "adopted_parameter_count": 0,
+  "research_model_status": "missing_parameters",
+  "research_etm_solved": false,
+  "mechanical_stress_pa": null,
+  "optimization_started": false,
+  "errors": []
+}

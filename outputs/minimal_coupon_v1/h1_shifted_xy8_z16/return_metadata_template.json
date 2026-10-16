@@ -1,0 +1,30 @@
+{
+  "case_id": "h1_shifted_xy8_z16",
+  "contract_sha256": "c0bc1ac837461461d137c89a87327a9c7d67f154a24f7359335cb554a73d392c",
+  "status": "not_run",
+  "solver": "COMSOL",
+  "result_kind": "external_solver_output",
+  "solver_version": null,
+  "solved_at": null,
+  "operator": null,
+  "notes": null,
+  "units": {
+    "coordinates": "m",
+    "temperature": "K",
+    "power": "W"
+  },
+  "base_mesh_dof": null,
+  "refined_mesh_dof": null,
+  "integrated_source_w": null,
+  "integrated_top_outward_heat_w": null,
+  "evidence": {
+    "model": {
+      "file": null,
+      "sha256": null
+    },
+    "solver_log": {
+      "file": null,
+      "sha256": null
+    }
+  }
+}

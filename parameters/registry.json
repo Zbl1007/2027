@@ -1,0 +1,896 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-16",
+  "purpose": "provenance_registry_not_solver_input",
+  "policy": {
+    "source_verified_is_not_adopted": true,
+    "missing_value": null,
+    "optimization_allowed": false,
+    "synthetic_values_allowed_for_research": false
+  },
+  "parameters": [
+    {
+      "parameter_id": "case.extent",
+      "label": "中介层平面边长",
+      "gap_ids": [
+        "G01"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 50,
+          "unit": "mm",
+          "source_id": "tap_cfg",
+          "line": 10,
+          "anchor": "intp_size = 50",
+          "source_assertion": "direct",
+          "applicability": "官方与派生包络一致"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "case.chiplet_count",
+      "label": "芯粒数量",
+      "gap_ids": [
+        "G01"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 6,
+          "unit": "count",
+          "source_id": "tap_cfg",
+          "line": 14,
+          "anchor": "chiplet_count = 6",
+          "source_assertion": "direct",
+          "applicability": "数组 ID 0-5"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "case.nominal_powers",
+      "label": "各芯粒额定功率",
+      "gap_ids": [
+        "G16",
+        "G21"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": [
+            105,
+            295,
+            295,
+            20,
+            20,
+            20
+          ],
+          "unit": "W",
+          "source_id": "tap_cfg",
+          "line": 17,
+          "anchor": "powers =",
+          "source_assertion": "direct",
+          "applicability": "名义功率，不是 actual-IV"
+        }
+      ],
+      "open_issue": "合计 755 W；不能推定供电电压和电流分配"
+    },
+    {
+      "parameter_id": "case.chiplet_dimensions",
+      "label": "芯粒宽高版本",
+      "gap_ids": [
+        "G01"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "conflicting_versions",
+      "candidates": [
+        {
+          "value": [
+            [
+              12,
+              12
+            ],
+            [
+              18.2,
+              18.2
+            ],
+            [
+              18.2,
+              18.2
+            ],
+            [
+              7.75,
+              11.87
+            ],
+            [
+              7.75,
+              11.87
+            ],
+            [
+              7.75,
+              11.87
+            ]
+          ],
+          "unit": "mm",
+          "source_id": "tap_cfg",
+          "line": 15,
+          "anchor": "widths =",
+          "source_assertion": "direct",
+          "applicability": "官方宽高在 15、16 行"
+        },
+        {
+          "value": [
+            [
+              12,
+              12
+            ],
+            [
+              18,
+              18
+            ],
+            [
+              18,
+              18
+            ],
+            [
+              12,
+              8
+            ],
+            [
+              12,
+              8
+            ],
+            [
+              12,
+              8
+            ]
+          ],
+          "unit": "mm",
+          "source_id": "local_layout",
+          "line": 25,
+          "anchor": "chiplets:",
+          "source_assertion": "direct",
+          "applicability": "当前派生尺寸"
+        }
+      ],
+      "open_issue": "不能无声替换固定布局的尺寸"
+    },
+    {
+      "parameter_id": "case.orientation",
+      "label": "芯粒朝向与局部坐标变换",
+      "gap_ids": [
+        "G02"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "未保存显式朝向"
+    },
+    {
+      "parameter_id": "package.technology",
+      "label": "封装技术",
+      "gap_ids": [
+        "G03"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": "silicon_interposer",
+          "unit": "enum",
+          "source_id": "tap_thermal",
+          "line": 146,
+          "anchor": "silicon interposer",
+          "source_assertion": "direct",
+          "applicability": "官方热结构；本地三场 profile 尚未配置"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "via.diameter",
+      "label": "TSV 直径",
+      "gap_ids": [
+        "G10"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "conflicting_versions",
+      "candidates": [
+        {
+          "value": 10,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 33,
+          "anchor": "TSV_diameter",
+          "source_assertion": "direct",
+          "applicability": "官方热模型取值"
+        },
+        {
+          "value": 20,
+          "unit": "um",
+          "source_id": "local_iccad",
+          "line": 23,
+          "anchor": "$d_{tsv}$",
+          "source_assertion": "direct",
+          "applicability": "本地电学参考，外部出处未核实"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "via.density_scale",
+      "label": "TSV_edge 等效密度尺度",
+      "gap_ids": [
+        "G13",
+        "G20"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 50,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 34,
+          "anchor": "TSV_edge",
+          "source_assertion": "direct",
+          "applicability": "不是完整逐孔 P/G 阵列"
+        }
+      ],
+      "open_issue": "官方面积公式与显式圆孔面积不同，不能直接反推 P/G 数量"
+    },
+    {
+      "parameter_id": "via.height",
+      "label": "物理 TSV 高度",
+      "gap_ids": [
+        "G10"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "conditional_candidates",
+      "candidates": [
+        {
+          "value": 100,
+          "unit": "um",
+          "source_id": "local_iccad",
+          "line": 24,
+          "anchor": "$h_{tsv}$",
+          "source_assertion": "direct",
+          "applicability": "旧参考，外部出处未核实"
+        },
+        {
+          "value": 110,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 146,
+          "anchor": "0.00011",
+          "source_assertion": "derived",
+          "applicability": "仅在恰好贯穿该层且不含端接的假设下成立",
+          "derivation": "L_TSV = t_interposer = 0.00011 m; assumption required"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "stack.substrate_thickness",
+      "label": "基板层厚",
+      "gap_ids": [
+        "G04"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 200,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 144,
+          "anchor": "0.0002",
+          "source_assertion": "direct",
+          "applicability": "官方分层热模型；机械实体需另核对"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "stack.c4_thickness",
+      "label": "C4/underfill层厚",
+      "gap_ids": [
+        "G04"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 70,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 145,
+          "anchor": "0.00007",
+          "source_assertion": "direct",
+          "applicability": "官方分层热模型；机械实体需另核对"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "stack.interposer_thickness",
+      "label": "硅中介层层厚",
+      "gap_ids": [
+        "G04"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 110,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 146,
+          "anchor": "0.00011",
+          "source_assertion": "direct",
+          "applicability": "官方分层热模型；机械实体需另核对"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "stack.microbump_thickness",
+      "label": "microbump/underfill层厚",
+      "gap_ids": [
+        "G04"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 10,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 147,
+          "anchor": "1.00E-05",
+          "source_assertion": "direct",
+          "applicability": "官方分层热模型；机械实体需另核对"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "stack.chip_thickness",
+      "label": "芯粒层厚",
+      "gap_ids": [
+        "G04"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 150,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 148,
+          "anchor": "0.00015",
+          "source_assertion": "direct",
+          "applicability": "官方分层热模型；机械实体需另核对"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "stack.tim_thickness",
+      "label": "TIM层厚",
+      "gap_ids": [
+        "G04"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 20,
+          "unit": "um",
+          "source_id": "tap_thermal",
+          "line": 149,
+          "anchor": "2.00E-05",
+          "source_assertion": "direct",
+          "applicability": "官方分层热模型；机械实体需另核对"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "thermal.k_copper",
+      "label": "铜热导率",
+      "gap_ids": [
+        "G17"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 400,
+          "unit": "W/(m*K)",
+          "source_id": "tap_thermal",
+          "line": 25,
+          "anchor": "resistivity_Cu",
+          "source_assertion": "derived",
+          "applicability": "热阻率倒数；不是电阻率，温变/各向异性未证明",
+          "derivation": "k = 1 / 0.0025 = 400 W/(m*K)"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "thermal.k_silicon",
+      "label": "硅热导率",
+      "gap_ids": [
+        "G17"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 100,
+          "unit": "W/(m*K)",
+          "source_id": "tap_thermal",
+          "line": 27,
+          "anchor": "resistivity_Si",
+          "source_assertion": "derived",
+          "applicability": "热阻率倒数；不是电阻率，温变/各向异性未证明",
+          "derivation": "k = 1 / 0.01 = 100 W/(m*K)"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "thermal.k_underfill",
+      "label": "underfill热导率",
+      "gap_ids": [
+        "G17"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 1.6,
+          "unit": "W/(m*K)",
+          "source_id": "tap_thermal",
+          "line": 26,
+          "anchor": "resistivity_UF",
+          "source_assertion": "derived",
+          "applicability": "热阻率倒数；不是电阻率，温变/各向异性未证明",
+          "derivation": "k = 1 / 0.625 = 1.6 W/(m*K)"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "thermal.k_tim",
+      "label": "TIM热导率",
+      "gap_ids": [
+        "G17"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 4,
+          "unit": "W/(m*K)",
+          "source_id": "tap_thermal",
+          "line": 149,
+          "anchor": "0.25",
+          "source_assertion": "derived",
+          "applicability": "热阻率倒数；不是电阻率，温变/各向异性未证明",
+          "derivation": "k = 1 / 0.25 = 4 W/(m*K)"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "thermal.ambient",
+      "label": "环境温度",
+      "gap_ids": [
+        "G19"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 318.15,
+          "unit": "K",
+          "source_id": "tap_hotspot",
+          "line": 78,
+          "anchor": "318.15",
+          "source_assertion": "direct",
+          "applicability": "不自动作为无应力或电阻参考温度"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "thermal.cooling_geometry",
+      "label": "扩展板/散热器边长",
+      "gap_ids": [
+        "G19"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": {
+            "spreader": 100,
+            "heatsink": 200
+          },
+          "unit": "mm",
+          "source_id": "tap_thermal",
+          "line": 154,
+          "anchor": "size_spreader = 2",
+          "source_assertion": "derived",
+          "applicability": "仅适用于 50 mm 包络与官方冷却结构",
+          "derivation": "spreader = 2*50 mm; heatsink = 2*spreader"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "thermal.convection_resistance",
+      "label": "散热器总对流热阻",
+      "gap_ids": [
+        "G19"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "source_verified",
+      "candidates": [
+        {
+          "value": 0.009,
+          "unit": "K/W",
+          "source_id": "tap_thermal",
+          "line": 156,
+          "anchor": "r_convec =",
+          "source_assertion": "derived",
+          "applicability": "不能直接搬到中介层顶面；须保留散热路径",
+          "derivation": "0.1*(0.06**2)/(0.2**2) = 0.009 K/W"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "electrical.nominal_voltage",
+      "label": "标称供电电压",
+      "gap_ids": [
+        "G05"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "local_evidence_only",
+      "candidates": [
+        {
+          "value": 1,
+          "unit": "V",
+          "source_id": "local_layout",
+          "line": 4,
+          "anchor": "vdd: 1",
+          "source_assertion": "direct",
+          "applicability": "local legacy，没有 TAP 电气来源"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "electrical.copper_resistivity",
+      "label": "铜电阻率",
+      "gap_ids": [
+        "G14"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "local_evidence_only",
+      "candidates": [
+        {
+          "value": 1.7e-08,
+          "unit": "ohm*m",
+          "source_id": "local_iccad",
+          "line": 26,
+          "anchor": "tsv",
+          "source_assertion": "direct",
+          "applicability": "缺外部来源、参考温度和温区"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "electrical.rdl_line_width",
+      "label": "P/G 金属线宽",
+      "gap_ids": [
+        "G08"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "local_evidence_only",
+      "candidates": [
+        {
+          "value": 20,
+          "unit": "um",
+          "source_id": "local_iccad",
+          "line": 13,
+          "anchor": "$w_{uc}$",
+          "source_assertion": "direct",
+          "applicability": "旧参考，不代表当前 TAP routing"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "electrical.rdl_metal_thickness",
+      "label": "P/G 金属厚度",
+      "gap_ids": [
+        "G08"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "local_evidence_only",
+      "candidates": [
+        {
+          "value": 0.7,
+          "unit": "um",
+          "source_id": "local_iccad",
+          "line": 14,
+          "anchor": "$t_{uc}$",
+          "source_assertion": "direct",
+          "applicability": "外部出处与等效并联模型待核实"
+        }
+      ],
+      "open_issue": ""
+    },
+    {
+      "parameter_id": "pg.counts_per_rail",
+      "label": "各 rail 固定 P/G 真孔数",
+      "gap_ids": [
+        "G09"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "需公开预算或基于有来源负载和限值推导"
+    },
+    {
+      "parameter_id": "pg.layout",
+      "label": "逐孔 ID、rail、坐标和端点",
+      "gap_ids": [
+        "G11"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "缺共享实体列表"
+    },
+    {
+      "parameter_id": "pg.bump_assignment",
+      "label": "P/G bump 与负载分配",
+      "gap_ids": [
+        "G06"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "通信矩阵不是供电电流"
+    },
+    {
+      "parameter_id": "pg.source_and_return",
+      "label": "封装入口与回流阻抗",
+      "gap_ids": [
+        "G07",
+        "G15"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "需坐标、阻抗与 ground policy"
+    },
+    {
+      "parameter_id": "via.liner",
+      "label": "衬层及阻挡层",
+      "gap_ids": [
+        "G12"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "需材料、厚度和端接"
+    },
+    {
+      "parameter_id": "electrical.tcr",
+      "label": "TCR 及参考温度",
+      "gap_ids": [
+        "G14"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "需材料温区和 bulk/contact 政策"
+    },
+    {
+      "parameter_id": "thermal.contacts",
+      "label": "热界面接触",
+      "gap_ids": [
+        "G18"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "与 TIM/等效边界分账，防重复热阻"
+    },
+    {
+      "parameter_id": "policy.load_heat",
+      "label": "负载与热功率政策",
+      "gap_ids": [
+        "G21",
+        "G22"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "区分 nominal heat、actual-IV、内部和外部损耗"
+    },
+    {
+      "parameter_id": "mechanical.stiffness",
+      "label": "E/nu 或刚度张量",
+      "gap_ids": [
+        "G24"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "按实体定义，明确硅晶向/等向近似"
+    },
+    {
+      "parameter_id": "mechanical.cte",
+      "label": "CTE 与热应变模型",
+      "gap_ids": [
+        "G25"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "需温区和切线/割线约定"
+    },
+    {
+      "parameter_id": "mechanical.reference_state",
+      "label": "无应力参考状态",
+      "gap_ids": [
+        "G26"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "不能自动等于环境或退火温度"
+    },
+    {
+      "parameter_id": "mechanical.boundaries",
+      "label": "机械支撑和界面",
+      "gap_ids": [
+        "G27",
+        "G28"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "不能用热边界代替机械约束"
+    },
+    {
+      "parameter_id": "mechanical.transfer_roi",
+      "label": "温度转移和应力 ROI",
+      "gap_ids": [
+        "G29",
+        "G31"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "需要共同实体及覆盖范围"
+    },
+    {
+      "parameter_id": "mechanical.backend",
+      "label": "真实机械后端",
+      "gap_ids": [
+        "G30"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "旧审计本机未发现可用 COMSOL，新项目未重探测"
+    },
+    {
+      "parameter_id": "limits.current_and_stress",
+      "label": "允许电流密度与应力",
+      "gap_ids": [
+        "G33"
+      ],
+      "selected_value": null,
+      "selected_unit": null,
+      "adoption_status": "not_adopted",
+      "evidence_status": "missing",
+      "candidates": [],
+      "open_issue": "容量推导或安全性判断需要有来源限值"
+    }
+  ]
+}

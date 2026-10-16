@@ -1,0 +1,267 @@
+{
+  "topic": "CoWoSLTIV",
+  "issue": "ETMModelingAudit",
+  "iteration": "v0.1.0",
+  "modes": [
+    "aitdd_minimal",
+    "temp.etm_p0_audit"
+  ],
+  "requiredEvidence": [
+    "contract",
+    "behavior"
+  ],
+  "semanticHints": [
+    "behavior"
+  ],
+  "templateSmoke": false,
+  "modeSnapshots": [
+    {
+      "id": "aitdd_minimal",
+      "name": "AITDD 最小自检",
+      "checks": [
+        {
+          "id": "aitdd.context.current_json_valid",
+          "name": "Current.json 有效",
+          "severity": "required",
+          "params": {}
+        },
+        {
+          "id": "aitdd.context.aitdd_policy_valid",
+          "name": "AITDDPolicy.json 有效",
+          "severity": "required",
+          "params": {}
+        },
+        {
+          "id": "common.json.field_matches",
+          "name": "Resolution 指向当前 Issue",
+          "severity": "required",
+          "params": {
+            "path": "${resolution.path}",
+            "field": "issue",
+            "pattern": "^${issue}$"
+          }
+        },
+        {
+          "id": "common.file.exists",
+          "name": "Iteration 详情存在",
+          "severity": "required",
+          "params": {
+            "path": "${iteration.path}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "temp.etm_p0_audit",
+      "name": "P0 TAP ETM audit evidence only",
+      "checks": [
+        {
+          "id": "common.file.exists",
+          "name": "ETM_IMPLEMENTATION_AUDIT.md",
+          "severity": "required",
+          "acceptanceType": "contract",
+          "params": {
+            "path": "audit/etm_p0_20261015/ETM_IMPLEMENTATION_AUDIT.md"
+          }
+        },
+        {
+          "id": "common.file.exists",
+          "name": "ETM_PARAMETER_GAPS.csv",
+          "severity": "required",
+          "acceptanceType": "contract",
+          "params": {
+            "path": "audit/etm_p0_20261015/ETM_PARAMETER_GAPS.csv"
+          }
+        },
+        {
+          "id": "common.file.exists",
+          "name": "ETM_REUSE_AND_CHANGE_PLAN.md",
+          "severity": "required",
+          "acceptanceType": "contract",
+          "params": {
+            "path": "audit/etm_p0_20261015/ETM_REUSE_AND_CHANGE_PLAN.md"
+          }
+        },
+        {
+          "id": "common.file.exists",
+          "name": "ETM_CASE_PHYSICAL_SUMMARY.md",
+          "severity": "required",
+          "acceptanceType": "contract",
+          "params": {
+            "path": "audit/etm_p0_20261015/ETM_CASE_PHYSICAL_SUMMARY.md"
+          }
+        },
+        {
+          "id": "common.json.field_matches",
+          "name": "selected_existing_tests_passed",
+          "severity": "required",
+          "acceptanceType": "behavior",
+          "params": {
+            "path": "audit/etm_p0_20261015/evidence/deliverable_validation.json",
+            "field": "selected_existing_tests_passed",
+            "pattern": "^True$",
+            "driver": "audit/etm_p0_20261015/scripts/verify_deliverables.py"
+          }
+        },
+        {
+          "id": "common.json.field_matches",
+          "name": "numerical_probes_complete",
+          "severity": "required",
+          "acceptanceType": "behavior",
+          "params": {
+            "path": "audit/etm_p0_20261015/evidence/deliverable_validation.json",
+            "field": "numerical_probes_complete",
+            "pattern": "^True$",
+            "driver": "audit/etm_p0_20261015/scripts/verify_deliverables.py"
+          }
+        },
+        {
+          "id": "common.json.field_matches",
+          "name": "audited_inputs_unchanged",
+          "severity": "required",
+          "acceptanceType": "behavior",
+          "params": {
+            "path": "audit/etm_p0_20261015/evidence/deliverable_validation.json",
+            "field": "audited_inputs_unchanged",
+            "pattern": "^True$",
+            "driver": "audit/etm_p0_20261015/scripts/verify_deliverables.py"
+          }
+        },
+        {
+          "id": "common.json.field_matches",
+          "name": "reports_and_gap_table_valid",
+          "severity": "required",
+          "acceptanceType": "behavior",
+          "params": {
+            "path": "audit/etm_p0_20261015/evidence/deliverable_validation.json",
+            "field": "reports_and_gap_table_valid",
+            "pattern": "^True$",
+            "driver": "audit/etm_p0_20261015/scripts/verify_deliverables.py"
+          }
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "aitdd.context.current_json_valid",
+      "name": "Current.json 有效",
+      "severity": "required",
+      "params": {},
+      "acceptanceType": "contract"
+    },
+    {
+      "id": "aitdd.context.aitdd_policy_valid",
+      "name": "AITDDPolicy.json 有效",
+      "severity": "required",
+      "params": {},
+      "acceptanceType": "contract"
+    },
+    {
+      "id": "common.json.field_matches",
+      "name": "Resolution 指向当前 Issue",
+      "severity": "required",
+      "params": {
+        "path": "Workspace/Topics/CoWoSLTIV/Issues/ETMModelingAudit/Resolution/Resolution.json",
+        "field": "issue",
+        "pattern": "^ETMModelingAudit$"
+      },
+      "acceptanceType": "contract"
+    },
+    {
+      "id": "common.file.exists",
+      "name": "Iteration 详情存在",
+      "severity": "required",
+      "params": {
+        "path": "Workspace/Topics/CoWoSLTIV/Issues/ETMModelingAudit/Resolution/Iterations/v0.1.0.md"
+      },
+      "acceptanceType": "contract"
+    },
+    {
+      "id": "common.file.exists",
+      "name": "ETM_IMPLEMENTATION_AUDIT.md",
+      "severity": "required",
+      "acceptanceType": "contract",
+      "params": {
+        "path": "audit/etm_p0_20261015/ETM_IMPLEMENTATION_AUDIT.md"
+      }
+    },
+    {
+      "id": "common.file.exists",
+      "name": "ETM_PARAMETER_GAPS.csv",
+      "severity": "required",
+      "acceptanceType": "contract",
+      "params": {
+        "path": "audit/etm_p0_20261015/ETM_PARAMETER_GAPS.csv"
+      }
+    },
+    {
+      "id": "common.file.exists",
+      "name": "ETM_REUSE_AND_CHANGE_PLAN.md",
+      "severity": "required",
+      "acceptanceType": "contract",
+      "params": {
+        "path": "audit/etm_p0_20261015/ETM_REUSE_AND_CHANGE_PLAN.md"
+      }
+    },
+    {
+      "id": "common.file.exists",
+      "name": "ETM_CASE_PHYSICAL_SUMMARY.md",
+      "severity": "required",
+      "acceptanceType": "contract",
+      "params": {
+        "path": "audit/etm_p0_20261015/ETM_CASE_PHYSICAL_SUMMARY.md"
+      }
+    },
+    {
+      "id": "common.json.field_matches",
+      "name": "selected_existing_tests_passed",
+      "severity": "required",
+      "acceptanceType": "behavior",
+      "params": {
+        "path": "audit/etm_p0_20261015/evidence/deliverable_validation.json",
+        "field": "selected_existing_tests_passed",
+        "pattern": "^True$",
+        "driver": "audit/etm_p0_20261015/scripts/verify_deliverables.py"
+      }
+    },
+    {
+      "id": "common.json.field_matches",
+      "name": "numerical_probes_complete",
+      "severity": "required",
+      "acceptanceType": "behavior",
+      "params": {
+        "path": "audit/etm_p0_20261015/evidence/deliverable_validation.json",
+        "field": "numerical_probes_complete",
+        "pattern": "^True$",
+        "driver": "audit/etm_p0_20261015/scripts/verify_deliverables.py"
+      }
+    },
+    {
+      "id": "common.json.field_matches",
+      "name": "audited_inputs_unchanged",
+      "severity": "required",
+      "acceptanceType": "behavior",
+      "params": {
+        "path": "audit/etm_p0_20261015/evidence/deliverable_validation.json",
+        "field": "audited_inputs_unchanged",
+        "pattern": "^True$",
+        "driver": "audit/etm_p0_20261015/scripts/verify_deliverables.py"
+      }
+    },
+    {
+      "id": "common.json.field_matches",
+      "name": "reports_and_gap_table_valid",
+      "severity": "required",
+      "acceptanceType": "behavior",
+      "params": {
+        "path": "audit/etm_p0_20261015/evidence/deliverable_validation.json",
+        "field": "reports_and_gap_table_valid",
+        "pattern": "^True$",
+        "driver": "audit/etm_p0_20261015/scripts/verify_deliverables.py"
+      }
+    }
+  ],
+  "postChecks": [],
+  "semanticGateFindings": []
+}

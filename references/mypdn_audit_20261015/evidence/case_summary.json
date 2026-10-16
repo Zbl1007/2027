@@ -1,0 +1,159 @@
+{
+  "source": "data/tap_50x50/multigpu.yaml",
+  "sha256": "0c1d29ccb291efec3ba15ac569ce0a5d9274c2a615bd2546a2616207d66076e3",
+  "raw": {
+    "case_schema_version": 1,
+    "name": "tap_multigpu_50x50_explicit",
+    "case_scope": "tap_workload_and_explicit_floorplan_only",
+    "vdd": 1,
+    "grid": {
+      "electrical_pitch_mm": 0.2,
+      "thermal_pitch_mm": 1.0,
+      "tiv_candidate_pitch_mm": 1.0
+    },
+    "interposer": {
+      "w": 50,
+      "h": 50
+    },
+    "benchmark": {
+      "family": "TAP-2.5D",
+      "source_commit": "3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb",
+      "source_config": "configs/sys_multigpu.cfg",
+      "source_config_git_blob_sha": "dbf25696f91958c5c0ce83ba0761b54248fe6103",
+      "source_local_file": "data/multigpu.yaml",
+      "source_local_sha256": "c40723ee02ee83df6db373f85fbdf29046da5963cc2be65e78fdfcd034005355",
+      "layout_source": "explicit_given",
+      "geometry_provenance": "derived_variant",
+      "power_provenance": "benchmark_exact",
+      "connectivity_provenance": "benchmark_exact",
+      "frequency_provenance": "local_legacy_metadata_not_from_tap",
+      "rigid_translation_mm": [
+        -0.4,
+        -3.4
+      ]
+    },
+    "chiplets": [
+      {
+        "id": 0,
+        "w": 12,
+        "h": 12,
+        "x": 18.6,
+        "y": 28.6,
+        "power": 105,
+        "freq": 5000000000.0
+      },
+      {
+        "id": 1,
+        "w": 18,
+        "h": 18,
+        "x": 4.6,
+        "y": 9.6,
+        "power": 295,
+        "freq": 1500000000.0
+      },
+      {
+        "id": 2,
+        "w": 18,
+        "h": 18,
+        "x": 27.6,
+        "y": 9.6,
+        "power": 295,
+        "freq": 1500000000.0
+      },
+      {
+        "id": 3,
+        "w": 12,
+        "h": 8,
+        "x": 7.6,
+        "y": 0.6,
+        "power": 20,
+        "freq": 1800000000.0
+      },
+      {
+        "id": 4,
+        "w": 12,
+        "h": 8,
+        "x": 30.6,
+        "y": 0.6,
+        "power": 20,
+        "freq": 1800000000.0
+      },
+      {
+        "id": 5,
+        "w": 12,
+        "h": 8,
+        "x": 18.6,
+        "y": 41.6,
+        "power": 20,
+        "freq": 1800000000.0
+      }
+    ],
+    "connection_matrix": {
+      "semantic": "tap_bandwidth_metadata",
+      "unit": "unspecified_by_adapter",
+      "value": [
+        [
+          0,
+          128,
+          128,
+          1024,
+          0,
+          0
+        ],
+        [
+          128,
+          0,
+          128,
+          0,
+          1024,
+          0
+        ],
+        [
+          128,
+          128,
+          0,
+          0,
+          0,
+          1024
+        ],
+        [
+          1024,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1024,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1024,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "nominal_power_w": 755,
+  "package_technology": null,
+  "frozen_via_layout": null,
+  "power_via_count": null,
+  "ground_via_count": null,
+  "via_diameter_m": null,
+  "stress_pa": null,
+  "status": "missing_parameters_and_backend",
+  "load_design_probe": {
+    "accepted": false,
+    "exception": "ConfigError",
+    "message": "design is missing required fields: ac_validation, candidates, electrothermal, materials, optimization, parameters_are_foundry, power_domains, rdl, schema_version, seed, thermal_boundary, thermal_layers, tiv_macros, units_policy"
+  }
+}

@@ -1,0 +1,48 @@
+layer0
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer1
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer2
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer3
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer4
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer5
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer6
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer7
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer8
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer9
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer10
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer11
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer12
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer13
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer14
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+
+layer15
+Cells: 576     Area: 2500.000000     Ave_Length: 2.083333     Height: 6.875000     Conductance: 0.050377     
+

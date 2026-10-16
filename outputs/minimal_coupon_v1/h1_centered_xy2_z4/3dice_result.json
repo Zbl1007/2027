@@ -1,0 +1,21 @@
+{
+  "case_id": "h1_centered_xy2_z4",
+  "status": "three_d_ice_solved_comsol_pending",
+  "contract_sha256": "42811d0a0b3f22f71b06ac2e58ab7d197a4582570edad77db272bba2be944e43",
+  "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+  "returncode": 0,
+  "cell_count": 144,
+  "min_temperature_k": 305.28135906405464,
+  "max_temperature_k": 305.45307930235373,
+  "volume_mean_temperature_k": 305.37694225763465,
+  "total_power_w": 0.0012958,
+  "reconstructed_top_outward_heat_w": 0.0012958000000032088,
+  "heat_balance_relative_error": 2.4763117376818175e-12,
+  "comsol_stress_pa": null,
+  "artifacts_sha256": {
+    "temperature.vtk": "48275eb07644b3a2f2ea8620dcbf4d4b03be2d10607222786e0ffb17d5e88519",
+    "3dice_field.csv": "98e4a31b67ec873ec3f9d89d50a9f633b19d0bef1faa61bd6fe7f9857073d99d",
+    "sample_points_m.txt": "8c93a58802bfb08562323392fd5e24bcbd3830eb10fbb3bb555db7891d8a88ae",
+    "3dice.log": "68f4153d1d306af1af8f5b32e954975ffb0d02a314d87dc01797031ad1dbeb7e"
+  }
+}

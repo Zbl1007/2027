@@ -1,0 +1,24 @@
+layer0
+Cells: 144     Area: 2500.000000     Ave_Length: 4.166667     Height: 13.750000     Conductance: 0.025188     
+
+layer1
+Cells: 144     Area: 2500.000000     Ave_Length: 4.166667     Height: 13.750000     Conductance: 0.025188     
+
+layer2
+Cells: 144     Area: 2500.000000     Ave_Length: 4.166667     Height: 13.750000     Conductance: 0.025188     
+
+layer3
+Cells: 144     Area: 2500.000000     Ave_Length: 4.166667     Height: 13.750000     Conductance: 0.025188     
+
+layer4
+Cells: 144     Area: 2500.000000     Ave_Length: 4.166667     Height: 13.750000     Conductance: 0.025188     
+
+layer5
+Cells: 144     Area: 2500.000000     Ave_Length: 4.166667     Height: 13.750000     Conductance: 0.025188     
+
+layer6
+Cells: 144     Area: 2500.000000     Ave_Length: 4.166667     Height: 13.750000     Conductance: 0.025188     
+
+layer7
+Cells: 144     Area: 2500.000000     Ave_Length: 4.166667     Height: 13.750000     Conductance: 0.025188     
+

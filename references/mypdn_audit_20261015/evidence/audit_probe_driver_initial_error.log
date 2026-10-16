@@ -1,0 +1,12 @@
+/Users/zbl/Desktop/docker/code/mypdn/OpSimulation.py:263: SparseEfficiencyWarning: splu converted its input to CSC format
+  self.LU = splu(G)
+Traceback (most recent call last):
+  File "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/scripts/collect_audit_evidence.py", line 192, in <module>
+    main()
+  File "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/scripts/collect_audit_evidence.py", line 187, in main
+    save('numerical_probes.json',numerical_probes(work))
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/scripts/collect_audit_evidence.py", line 150, in numerical_probes
+    dc = solve_dc(dc_build)
+         ^^^^^^^^^^^^^^^^^^
+TypeError: solve_dc() missing 1 required keyword-only argument: 'backend'

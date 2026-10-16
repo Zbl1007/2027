@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "topic": "CoWoSLTIV",
+  "topicPath": "Workspace/Topics/CoWoSLTIV",
+  "issue": "EquivalentDomainMinimumTivOptimization",
+  "issuePath": "Workspace/Topics/CoWoSLTIV/Issues/EquivalentDomainMinimumTivOptimization/Issue.md",
+  "decisionPath": "Workspace/Topics/CoWoSLTIV/Issues/EquivalentDomainMinimumTivOptimization/Decision.md",
+  "resolutionPath": "Workspace/Topics/CoWoSLTIV/Issues/EquivalentDomainMinimumTivOptimization/Resolution/Resolution.json",
+  "currentIteration": "v0.8.0",
+  "iterationPath": "Workspace/Topics/CoWoSLTIV/Issues/EquivalentDomainMinimumTivOptimization/Resolution/Iterations/v0.8.0.md",
+  "updatedAt": "2026-09-01T12:06:29+08:00",
+  "source": "AI_CONTEXT"
+}

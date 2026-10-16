@@ -1,0 +1,43 @@
+{
+  "case_id": "h0_z4",
+  "fidelity": "synthetic_fixture",
+  "definition_sha256": "0ce4691d470f14cd9b801d51f218dbc1fcea68bbd2bad7bddd49e73df3a4219f",
+  "size_m": [
+    0.01,
+    0.01,
+    0.0001
+  ],
+  "regions": [
+    {
+      "id": "body",
+      "material": "silicon",
+      "x_m": 0.0,
+      "y_m": 0.0,
+      "width_m": 0.01,
+      "depth_m": 0.01
+    }
+  ],
+  "region_volumes_m3": {
+    "silicon": 1e-08,
+    "copper": 0,
+    "silica": 0
+  },
+  "total_power_w": 50.0,
+  "q_silicon_w_m3": 5000000000.0,
+  "xy_subdivisions_per_region": 1,
+  "z_cells": 4,
+  "expected_cells": 4,
+  "thermal_boundary": {
+    "ambient_k": 300.0,
+    "top_h_w_m2k": 100000.0,
+    "other_faces": "adiabatic",
+    "source": "ice_solid",
+    "interface": "perfect_thermal_contact"
+  },
+  "three_d_ice_inputs": {
+    "case.stk": "9be4291c34db605affa73ad92a94050a5623e2db7302a190e730eb6d47027cc0",
+    "source.flp": "342238614ec2fd337392001059c259997290ed97d91fab273de70f0ca4f3d108"
+  },
+  "mechanical_stress_pa": null,
+  "comsol_status": "pending_external_solver"
+}

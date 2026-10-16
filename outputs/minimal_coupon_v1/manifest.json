@@ -1,0 +1,44 @@
+{
+  "family": "3dice_comsol_minimal_v1",
+  "cases": [
+    {
+      "case_id": "h0_z4",
+      "contract_sha256": "0cb33f212532c8e31b728ad7e011152287d209a9d6d94102328d1c166011e97a"
+    },
+    {
+      "case_id": "h0_z8",
+      "contract_sha256": "48ce528125f89572b0061c3be335091c2a6ee1ceaec0bd3d7e273d3eac63e7f3"
+    },
+    {
+      "case_id": "h0_z16",
+      "contract_sha256": "9236da07173ad18aa28bfdad8ac1c0764983b3f1b507fb001535263f97c863c7"
+    },
+    {
+      "case_id": "h1_centered_xy2_z4",
+      "contract_sha256": "42811d0a0b3f22f71b06ac2e58ab7d197a4582570edad77db272bba2be944e43"
+    },
+    {
+      "case_id": "h1_centered_xy4_z8",
+      "contract_sha256": "fc0000e2ad593b0e0d2219534e3d487534188149fa4fe4b56fe499c24b114fe8"
+    },
+    {
+      "case_id": "h1_centered_xy8_z16",
+      "contract_sha256": "6f1857425a6516ffcf2f7e865dad91cd5ca341a9de2669e31ac7801d5fd3038f"
+    },
+    {
+      "case_id": "h1_shifted_xy2_z4",
+      "contract_sha256": "a8950e847506cac98d9162631202f0136ae857f13dccbe8a14997f9017aab94f"
+    },
+    {
+      "case_id": "h1_shifted_xy4_z8",
+      "contract_sha256": "5fe2f0ed8e32b2ea56de058616e9294ee9f0e57cebf9625adaca1b500a22c586"
+    },
+    {
+      "case_id": "h1_shifted_xy8_z16",
+      "contract_sha256": "c0bc1ac837461461d137c89a87327a9c7d67f154a24f7359335cb554a73d392c"
+    }
+  ],
+  "definition_sha256": "0ce4691d470f14cd9b801d51f218dbc1fcea68bbd2bad7bddd49e73df3a4219f",
+  "thermal_status": "prepared_not_run",
+  "mechanical_stress_pa": null
+}

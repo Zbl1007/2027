@@ -1,0 +1,6 @@
+body:
+ position 0, 0;
+ dimension 10000, 10000;
+ material silicon;
+ discretization 1, 1;
+ power values 12.5;

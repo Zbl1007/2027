@@ -1,0 +1,12 @@
+..............................................................           [100%]
+=============================== warnings summary ===============================
+tests/golden/test_dc_builder_analytic.py::test_minimal_series_double_pg_circuit_matches_analytic_solution
+tests/golden/test_multi_ground_dc_builder.py::test_common_ideal_shared_ground_matches_analytic_voltage_and_capacity
+tests/golden/test_multi_ground_dc_builder.py::test_separate_with_impedance_adds_explicit_package_return_bounce
+tests/golden/test_multi_ground_dc_builder.py::test_schema_v2_result_contract_serializes_typed_ordering
+tests/golden/test_site_option_dc_v2.py::test_shared_ground_option_current_comes_from_actual_return_branch
+  /Users/zbl/Desktop/docker/code/mypdn/OpSimulation.py:263: SparseEfficiencyWarning: splu converted its input to CSC format
+    self.LU = splu(G)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+62 passed, 5 warnings in 4.80s

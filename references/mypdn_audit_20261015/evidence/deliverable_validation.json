@@ -1,0 +1,40 @@
+{
+  "scope": "P0 audit deliverable integrity; not TAP model acceptance",
+  "selected_existing_tests_passed": true,
+  "selected_test_total": 130,
+  "test_summaries": [
+    {
+      "group": "data_dc",
+      "exit_code": 0,
+      "tests": 62,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "group": "thermal_et",
+      "exit_code": 0,
+      "tests": 53,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "group": "physics_hard",
+      "exit_code": 0,
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "numerical_probes_complete": true,
+  "audited_inputs_unchanged": true,
+  "changed_inputs": [],
+  "reports_and_gap_table_valid": true,
+  "gap_rows": 36,
+  "research_etm_solved": false,
+  "mechanical_stress_pa": null,
+  "optimization_started": false,
+  "status": "pass"
+}

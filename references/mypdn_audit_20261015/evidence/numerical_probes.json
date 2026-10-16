@@ -1,0 +1,76 @@
+{
+  "power_accounting": {
+    "fidelity": "synthetic_fixture",
+    "mock": false,
+    "converged": true,
+    "current_contract_feasible": true,
+    "source_power_w": 3.400000000000085,
+    "actual_load_power_w": 1.5449196520727442,
+    "pdn_loss_w": 1.8550803479272795,
+    "die_heat_w": 3.4,
+    "joule_heat_w": 1.8550803479272797,
+    "thermal_injected_w": 5.255080347927279,
+    "dc_balance_residual_w": 6.150635556423367e-14,
+    "thermal_balance_residual_w": 1.7763568394002505e-15,
+    "die_heat_minus_actual_iv_w": 1.8550803479272557,
+    "thermal_input_minus_electrical_source_w": 1.8550803479271942
+  },
+  "one_macro_move": {
+    "fidelity": "synthetic_fixture",
+    "mock": false,
+    "search_or_optimization": false,
+    "selected_a": [
+      0,
+      1
+    ],
+    "selected_b": [
+      0,
+      6
+    ],
+    "physical_macro_count_a": 2,
+    "physical_macro_count_b": 2,
+    "same_macro_geometry": true,
+    "fingerprint_changed": true,
+    "dc_endpoints_changed": true,
+    "thermal_overlap_changed": true,
+    "joule_mapping_changed": true,
+    "dc_max_voltage_delta_v": 0.06894382899659113,
+    "max_temperature_field_delta_k": 57.08474588212994
+  },
+  "v1_relaxed_stop": {
+    "fidelity": "synthetic_fixture",
+    "mock": false,
+    "relaxation": 1e-08,
+    "tolerance_k": 0.0001,
+    "reported_converged": true,
+    "reported_relaxed_step_k": 5.065078312327387e-08,
+    "raw_fixed_point_residual_from_initial_k": 5.0650791904292305,
+    "returned_vs_raw_heat_solution_delta_k": 5.065079139778447
+  },
+  "signed_boundary_flux": {
+    "fidelity": "synthetic_fixture",
+    "mock": false,
+    "die_heat_w": 0.0,
+    "top_temperature_k": 308.15,
+    "bottom_temperature_k": 288.15,
+    "reported_boundary_flow_w": 0.11844331641285935,
+    "reported_residual_w": -0.11844331641285935,
+    "expected_net_boundary_flow_w_for_source_free_steady_state": 0.0
+  },
+  "backend_smoke": {
+    "scipy": {
+      "status": "solved_synthetic_fixture",
+      "power_residual_w": -5.5289106626332796e-14
+    },
+    "pardiso": {
+      "status": "unavailable",
+      "error_type": "RuntimeError",
+      "message": "PARDISO backend is unavailable: No module named 'op_sim_cpp'"
+    },
+    "cudss": {
+      "status": "unavailable",
+      "error_type": "RuntimeError",
+      "message": "cuDSS backend is unavailable: No module named 'op_sim_cuda_cpp'"
+    }
+  }
+}

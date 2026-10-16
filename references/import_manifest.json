@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-16T07:26:24.866847+00:00",
+  "project": "tap25d-etm",
+  "source_repository": {
+    "path": "/Users/zbl/Desktop/docker/code/mypdn",
+    "head": "373645e631af872be175e9966c82b3a0d6ae460f",
+    "worktree_dirty": true,
+    "git_status_sha256": "fce6b0633635189302f68f7e6fd1347ee4126563afbe723775921bc337b44f84",
+    "meaning": "Snapshot of current working tree, not reproducible from HEAD alone"
+  },
+  "files": [
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/ETM_CASE_PHYSICAL_SUMMARY.md",
+      "snapshot": "references/mypdn_audit_20261015/ETM_CASE_PHYSICAL_SUMMARY.md",
+      "sha256": "07f51597a2b01e0c346c87db63faf5716e82c16b4f7959998dd896b1512aa084",
+      "bytes": 5997
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/ETM_IMPLEMENTATION_AUDIT.md",
+      "snapshot": "references/mypdn_audit_20261015/ETM_IMPLEMENTATION_AUDIT.md",
+      "sha256": "98a6df78fb467a3f1fec295884b5ef4d9fc6e98b10f705c2212bfb524d1979e2",
+      "bytes": 23431
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/ETM_LITERATURE_PROVENANCE_ADDENDUM.md",
+      "snapshot": "references/mypdn_audit_20261015/ETM_LITERATURE_PROVENANCE_ADDENDUM.md",
+      "sha256": "6dbae83634ceafbbcf64290034d66b7ecd95c8874a2399a20c9e3188a9a20bdb",
+      "bytes": 6270
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/ETM_PARAMETER_GAPS.csv",
+      "snapshot": "references/mypdn_audit_20261015/ETM_PARAMETER_GAPS.csv",
+      "sha256": "690c6bfe4a98974dba4043eb080b28dcd458263a9de5367c4b91be9fc579196c",
+      "bytes": 10133
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/ETM_REUSE_AND_CHANGE_PLAN.md",
+      "snapshot": "references/mypdn_audit_20261015/ETM_REUSE_AND_CHANGE_PLAN.md",
+      "sha256": "25793bb8dd85446cf8888e5031677e0cc940ab7eeb9fcd14dfbe5e0495124abc",
+      "bytes": 8236
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/ETM_VALIDATION_RECORD.md",
+      "snapshot": "references/mypdn_audit_20261015/ETM_VALIDATION_RECORD.md",
+      "sha256": "020de884c2e6625abcf0bf75603302f182cdb083910a233f85b5beeea0ff1711",
+      "bytes": 6138
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/README.md",
+      "snapshot": "references/mypdn_audit_20261015/README.md",
+      "sha256": "4a4cb714d9c9370a56e0900dcdf2e6d2596d3fee80058c319cac90b8d8e6b09d",
+      "bytes": 2020
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/aitdd_current_before.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/aitdd_current_before.json",
+      "sha256": "4f07acd9162506424d83cd21fc39a216a2e28567884bde848010bb67ed66c0e6",
+      "bytes": 709
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/aitdd_run_dry-run.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/aitdd_run_dry-run.log",
+      "sha256": "3df630901b29967ad06a0b7cf6b244aa9f4d147b437359ca76892c7053c35416",
+      "bytes": 8128
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/aitdd_validate-current.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/aitdd_validate-current.log",
+      "sha256": "5a57857f7ccdb2b566d323138552d3cfb2831e149d6db63174fae7bc4b64a41e",
+      "bytes": 20
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/aitdd_validate-iteration.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/aitdd_validate-iteration.log",
+      "sha256": "4de293d1a916f0375fa6385c423e1ef722aba1a63515ca6fb36cd43317f12985",
+      "bytes": 17
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/aitdd_validate-resolution.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/aitdd_validate-resolution.log",
+      "sha256": "216f894a212dc0ecdb6ca880887fcc13d6e25019ec9bbb15f9db76f8af1ccb9a",
+      "bytes": 23
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/aitdd_validation.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/aitdd_validation.json",
+      "sha256": "642b637d00bac95078b196627189d47c1ee65ff97e331a206d76d3a73cc2a55a",
+      "bytes": 990
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/audit_probe_driver_initial_error.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/audit_probe_driver_initial_error.log",
+      "sha256": "149c3e05fbb9dd84927c1e95626b495fb85bb33923906fc35cf19cda88a432f7",
+      "bytes": 810
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/audit_probes.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/audit_probes.log",
+      "sha256": "11a593a029e7371440b5405f71b5441dff808cbfd935f0df77c42283afb2e2d3",
+      "bytes": 211
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/case_summary.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/case_summary.json",
+      "sha256": "504d0a82f4f1604335f60887d3b0793fe2659c22843ff306212aa0ce281082f4",
+      "bytes": 3465
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/compiler_probe.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/compiler_probe.json",
+      "sha256": "9aca5cb9204cdece1ba7d0bbbd11fd2a7a5d4b4615403fecc2b0b00294322a05",
+      "bytes": 192
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/data_dc.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/data_dc.log",
+      "sha256": "fad8904ce4f13d151fa0e4ceb511191a6d6cc4e824313bcef947c978494e3197",
+      "bytes": 953
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/data_dc.xml",
+      "snapshot": "references/mypdn_audit_20261015/evidence/data_dc.xml",
+      "sha256": "950db38361265c1ca9f6e1ef0a1e57290f614066a9a0b036410541d79991a09b",
+      "bytes": 8895
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/deliverable_validation.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/deliverable_validation.json",
+      "sha256": "ba80dd0b11230cfd5b1b32089c1d7b12ecde4cd1540399ecea24c6dc1e518fb0",
+      "bytes": 868
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/environment.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/environment.json",
+      "sha256": "b038ace043f97f8c8f5e8b6a4c56a6cd46d73197b3d01c8535a505009114b35e",
+      "bytes": 1056
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/fixture_compiled.manifest.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/fixture_compiled.manifest.json",
+      "sha256": "a2676b2ae0ba8ec5114370939d3087d7abf66de05d2820cbd8f05d6b29f6f168",
+      "bytes": 5276
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/fixture_mapping_summary.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/fixture_mapping_summary.json",
+      "sha256": "0c3a7730f99ddc5d2e93ffec3dea3668aa2db9f3c1ad94ba22087e56b631e15a",
+      "bytes": 1803
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/fixture_normalized_case.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/fixture_normalized_case.json",
+      "sha256": "2b25a69ceeda94d54ee3f569a5f5fc07c992fbd2a90e0f35e337f103a196c027",
+      "bytes": 2582
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/fixture_thermal_instance_power.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/fixture_thermal_instance_power.json",
+      "sha256": "598d9f446bd36aefcb741bd04c9abc58ae5887c4afba7e2dd1eed678399b9286",
+      "bytes": 674
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/git_status_at_start.txt",
+      "snapshot": "references/mypdn_audit_20261015/evidence/git_status_at_start.txt",
+      "sha256": "d382f56800032909149018dd380f0856d7c2448756f2102c97d89425bc92d6db",
+      "bytes": 51900
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/initial_environment_blocker/data_dc.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/initial_environment_blocker/data_dc.log",
+      "sha256": "5d87e3dcf15bc7542070c30f63a751deb1da386e09da6a87d784cf537263dec2",
+      "bytes": 14482
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/initial_environment_blocker/data_dc.xml",
+      "snapshot": "references/mypdn_audit_20261015/evidence/initial_environment_blocker/data_dc.xml",
+      "sha256": "a33fd0e12d9778c93c41fabb6aa6a3285fc4a17753785f3b01b4a2466fc8bcfd",
+      "bytes": 15039
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/initial_environment_blocker/physics_hard.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/initial_environment_blocker/physics_hard.log",
+      "sha256": "34c9f2ed83744c03a810bf3274bd94b86494d4863921a70d4991352a40d635e8",
+      "bytes": 3912
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/initial_environment_blocker/physics_hard.xml",
+      "snapshot": "references/mypdn_audit_20261015/evidence/initial_environment_blocker/physics_hard.xml",
+      "sha256": "b5e9320bd4af6a042b65ed099c77e017be39109536cf6e0f74211dbce6c96ce8",
+      "bytes": 3258
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/initial_environment_blocker/test_runs.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/initial_environment_blocker/test_runs.json",
+      "sha256": "4378398768f58371d8acf4fddf21a06a914614951b82d1dd967d2937c02adf44",
+      "bytes": 2800
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/initial_environment_blocker/thermal_et.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/initial_environment_blocker/thermal_et.log",
+      "sha256": "52e9c112bbe179aa2837ff3d974ac43a9969d53ba80a30a874a15c6246b68f3c",
+      "bytes": 14548
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/initial_environment_blocker/thermal_et.xml",
+      "snapshot": "references/mypdn_audit_20261015/evidence/initial_environment_blocker/thermal_et.xml",
+      "sha256": "1331b04fc5c3c9a08b43f3b5e4100a9b4102f5c57ff23d7f5de6fa41bb1ad114",
+      "bytes": 15105
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/input_hashes.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/input_hashes.json",
+      "sha256": "699610cf6f0f20ec2c69ba467c29e16e5896a1d3053622dc24cf549813ab001d",
+      "bytes": 36060
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/literature_20261016/hotspot.config",
+      "snapshot": "references/mypdn_audit_20261015/evidence/literature_20261016/hotspot.config",
+      "sha256": "1c92fb1c03d279a26ae0fd7a51ac4a9a0fef004223af0f5603c6619d75b949dc",
+      "bytes": 4507
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/literature_20261016/passive_interposer.py",
+      "snapshot": "references/mypdn_audit_20261015/evidence/literature_20261016/passive_interposer.py",
+      "sha256": "dcbbaaa86a187bac3f1a1b12f49bd0dfc1c6cb3ed4e50ec51583f762adcf0a52",
+      "bytes": 15937
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/literature_20261016/sources.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/literature_20261016/sources.json",
+      "sha256": "2925f34ebb2cb48f6cc90c268ae0165eac652565183ef23d30877fd2ed988496",
+      "bytes": 731
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/numerical_probes.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/numerical_probes.json",
+      "sha256": "c0a4c16b32d8f6b5abf67d2082d94a1d4e0c26570dbed87fe82d1158da47b07a",
+      "bytes": 2354
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/physics_hard.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/physics_hard.log",
+      "sha256": "be95e3459edc18916223a1826160b4333de7f01ad34c1819bb4a9a407ff057f1",
+      "bytes": 724
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/physics_hard.xml",
+      "snapshot": "references/mypdn_audit_20261015/evidence/physics_hard.xml",
+      "sha256": "4367cc25ec7e5c3422f04146147d48d471f8718f5e4f7aa9c79a0d3b3a0ed216",
+      "bytes": 2396
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/test_environment_setup.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/test_environment_setup.log",
+      "sha256": "33c5cc71a1411b7040e5e380391399d653079dccf4da198f6be8c6e909eea1a3",
+      "bytes": 3421
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/test_runs.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/test_runs.json",
+      "sha256": "eb6451e35bd4bf2f8957417b0dd0fe713030126420dfba7815e0efa29d419bfd",
+      "bytes": 2773
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/thermal_et.log",
+      "snapshot": "references/mypdn_audit_20261015/evidence/thermal_et.log",
+      "sha256": "627fe442d268f3e55d56af515196c9d429201a4f50e8949c6dfbde279c6a5a1a",
+      "bytes": 626
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/thermal_et.xml",
+      "snapshot": "references/mypdn_audit_20261015/evidence/thermal_et.xml",
+      "sha256": "8605c9737bc6ced9cc4e971a6527214708c9409e62119745c28046f03a139178",
+      "bytes": 7797
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/upstream_source.json",
+      "snapshot": "references/mypdn_audit_20261015/evidence/upstream_source.json",
+      "sha256": "dffaea5135467f07b3082a7af9ef3cad3449f949177170eed6b5e148ee8831d7",
+      "bytes": 404
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/upstream_sys_multigpu.cfg",
+      "snapshot": "references/mypdn_audit_20261015/evidence/upstream_sys_multigpu.cfg",
+      "sha256": "6585bf9588d96b7e03277a17d8865dc2f105005356a77b333f5485c9b30865a3",
+      "bytes": 642
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/scripts/collect_audit_evidence.py",
+      "snapshot": "references/mypdn_audit_20261015/scripts/collect_audit_evidence.py",
+      "sha256": "251d592a874d5e3034f10732ba8e80e20ffbc69e1fc70e18278f9a373aaf207d",
+      "bytes": 10384
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/scripts/run_existing_checks.py",
+      "snapshot": "references/mypdn_audit_20261015/scripts/run_existing_checks.py",
+      "sha256": "faef37108d14f87e53a8f9fb6163c4379613527d51079b3c1977083797a98a3b",
+      "bytes": 3229
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/scripts/verify_deliverables.py",
+      "snapshot": "references/mypdn_audit_20261015/scripts/verify_deliverables.py",
+      "sha256": "751727c5b0961f0485cdcfadb62fc7ad6b00cfc465194c78d772a4f3d4d141ea",
+      "bytes": 3079
+    },
+    {
+      "source": "/Users/zbl/Desktop/TAP25D_ETM_Modeling_Design_for_Codex.md",
+      "snapshot": "references/request_documents/TAP25D_ETM_Modeling_Design_for_Codex.md",
+      "sha256": "9db8b00e8f42113aa5591b1c40608a8a5bfcd6865fe612b0a115529da1502b7e",
+      "bytes": 38240
+    },
+    {
+      "source": "/Users/zbl/Desktop/Codex_Prompts_ETM_Modeling.md",
+      "snapshot": "references/request_documents/Codex_Prompts_ETM_Modeling.md",
+      "sha256": "d8102fc079f120cb4a1ee254e692794dc99caed2d39345cafc08d10e67d9ec94",
+      "bytes": 9441
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/data/tap_50x50/multigpu.yaml",
+      "snapshot": "references/mypdn_case/multigpu.yaml",
+      "sha256": "0c1d29ccb291efec3ba15ac569ce0a5d9274c2a615bd2546a2616207d66076e3",
+      "bytes": 1595
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/data/tap_50x50/README.md",
+      "snapshot": "references/mypdn_case/README.md",
+      "sha256": "2b0a5eea4b0fba34afa31b4d9c97f674022105ffc428c5ac3f288d59261831be",
+      "bytes": 901
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/ICCAD/table1.tex",
+      "snapshot": "references/mypdn_model_reference/table1.tex",
+      "sha256": "0fc15dc32f2b1c21045a0516c5442399866a15d6db8971255c33ec19eb6e7552",
+      "bytes": 1213
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/upstream_sys_multigpu.cfg",
+      "snapshot": "references/upstream/tap25d/configs/sys_multigpu.cfg",
+      "sha256": "6585bf9588d96b7e03277a17d8865dc2f105005356a77b333f5485c9b30865a3",
+      "bytes": 642
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/literature_20261016/passive_interposer.py",
+      "snapshot": "references/upstream/tap25d/passive_interposer.py",
+      "sha256": "dcbbaaa86a187bac3f1a1b12f49bd0dfc1c6cb3ed4e50ec51583f762adcf0a52",
+      "bytes": 15937
+    },
+    {
+      "source": "/Users/zbl/Desktop/docker/code/mypdn/audit/etm_p0_20261015/evidence/literature_20261016/hotspot.config",
+      "snapshot": "references/upstream/tap25d/util/hotspot.config",
+      "sha256": "1c92fb1c03d279a26ae0fd7a51ac4a9a0fef004223af0f5603c6619d75b949dc",
+      "bytes": 4507
+    }
+  ],
+  "source_documents_are_reference_not_execution_authorization": true,
+  "prior_test_results_are_historical": true
+}

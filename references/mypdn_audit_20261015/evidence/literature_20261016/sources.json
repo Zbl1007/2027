@@ -1,0 +1,19 @@
+{
+  "review_date": "2026-10-16",
+  "sources": [
+    {
+      "file": "passive_interposer.py",
+      "url": "https://raw.githubusercontent.com/bu-icsg/TAP-2.5D/3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb/passive_interposer.py",
+      "sha256": "dcbbaaa86a187bac3f1a1b12f49bd0dfc1c6cb3ed4e50ec51583f762adcf0a52",
+      "bytes": 15937,
+      "review": "static source read only; not executed"
+    },
+    {
+      "file": "hotspot.config",
+      "url": "https://raw.githubusercontent.com/bu-icsg/TAP-2.5D/3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb/util/hotspot.config",
+      "sha256": "1c92fb1c03d279a26ae0fd7a51ac4a9a0fef004223af0f5603c6619d75b949dc",
+      "bytes": 4507,
+      "review": "static source read only; not executed"
+    }
+  ]
+}

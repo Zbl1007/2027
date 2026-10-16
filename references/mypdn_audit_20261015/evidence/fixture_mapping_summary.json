@@ -1,0 +1,61 @@
+{
+  "aggregated_load_point_count": 1,
+  "all_current_conserved": true,
+  "analysis_extent_m": {
+    "height": 0.0008,
+    "width": 0.001
+  },
+  "candidate_eligibility_scope": "padding_gate_only",
+  "case_id": "minimal",
+  "declared_instance_power_reference_w": 1.0,
+  "eligible_candidate_in_padding_count": 0,
+  "instance_overlap_row_sum_max_error": 0.0,
+  "instance_overlap_rows_normalized": true,
+  "invalid_terminal_count": 0,
+  "load_aggregation_ratio": 1.0,
+  "load_in_pure_padding_count": 0,
+  "load_terminal_in_padding_region_count": 0,
+  "mapped_terminal_count": 4,
+  "native_extent_m": {
+    "height": 0.0008,
+    "width": 0.001
+  },
+  "netlist_iv_power_w": 1.0,
+  "package_current_policy": "expected_allocation_capacity_metadata_only",
+  "package_current_source_count": 0,
+  "package_ground_terminal_count": 1,
+  "package_power_terminal_count": 1,
+  "package_terminal_count": 2,
+  "padding": {
+    "area_ratio": 0.0,
+    "origin_policy": "lower_left_fixed_right_top_pad",
+    "right_m": 0.0,
+    "top_m": 0.0
+  },
+  "raw_load_terminal_count": 1,
+  "raw_terminal_count": 4,
+  "schema_version": 1,
+  "supply_pairs": [
+    {
+      "aggregated_current_a": 1.0,
+      "aggregated_point_count": 1,
+      "aggregation_ratio": 1.0,
+      "current_conserved": true,
+      "current_error_a": 0.0,
+      "nominal_voltage_v": 1.0,
+      "power_net": "VDD",
+      "power_w": 1.0,
+      "raw_current_a": 1.0,
+      "raw_terminal_count": 1,
+      "return_net": "VSS",
+      "supply_pair": "one_volt"
+    }
+  ],
+  "thermal_grid_power_conserved": true,
+  "thermal_grid_power_error_w": 0.0,
+  "thermal_grid_total_power_w": 1.0,
+  "thermal_power_conserved": true,
+  "thermal_power_error_w": 0.0,
+  "thermal_spatial_policy": "uniform_within_physical_instance_exact_area_overlap",
+  "thermal_total_power_w": 1.0
+}

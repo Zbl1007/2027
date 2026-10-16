@@ -1,0 +1,47 @@
+[
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "AIWorkflow/AITDD/Core/Acceptance/acceptance_runner.py",
+      "validate-current"
+    ],
+    "exit_code": 0,
+    "log": "aitdd_validate-current.log",
+    "formal_run": false
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "AIWorkflow/AITDD/Core/Acceptance/acceptance_runner.py",
+      "validate-resolution"
+    ],
+    "exit_code": 0,
+    "log": "aitdd_validate-resolution.log",
+    "formal_run": false
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "AIWorkflow/AITDD/Core/Acceptance/acceptance_runner.py",
+      "validate-iteration"
+    ],
+    "exit_code": 0,
+    "log": "aitdd_validate-iteration.log",
+    "formal_run": false
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "AIWorkflow/AITDD/Core/Acceptance/acceptance_runner.py",
+      "run",
+      "--dry-run"
+    ],
+    "exit_code": 0,
+    "log": "aitdd_run_dry-run.log",
+    "formal_run": false
+  }
+]

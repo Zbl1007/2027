@@ -1,0 +1,51 @@
+{
+  "scope": "synthetic_fixture_only_not_TAP_parameter_adoption",
+  "reviewed_on": "2026-10-16",
+  "sources": {
+    "ice_solid": {
+      "url": "https://github.com/Zbl1007/3d-ice/blob/4953952a1ef6d38807ff307212a6f15e5b2ef935/test/solid/steady/topsink.stk",
+      "locator": "material SILICON; top heat sink; dimensions; die BOTTOMDIE/TOPDIE",
+      "values_si": {"k_silicon_w_mk": 130, "cv_silicon_j_m3k": 1635660, "h_w_m2k": 100000, "ambient_k": 300},
+      "evidence": "sources/three_d_ice.lock.json",
+      "limitation": "Example inputs, not measured TAP process properties. H0 combines the two dies into a single 100 um continuous body."
+    },
+    "ice_solid_and_background_derived": {
+      "url": "https://github.com/Zbl1007/3d-ice/blob/4953952a1ef6d38807ff307212a6f15e5b2ef935/test/background.flp",
+      "locator": "whole-chip floorplan power sequence first value: 50 W",
+      "derivation": "q=50/(0.01*0.01*0.0001)=5e9 W/m3. Uniform volume heating is a new explicit verification load, not the upstream source placement."
+    },
+    "tap_thermal": {
+      "url": "https://github.com/bu-icsg/TAP-2.5D/blob/3a3f4e5a4d019b2d9cda1f72d8d1755238845dbb/passive_interposer.py",
+      "snapshot": "references/upstream/tap25d/passive_interposer.py",
+      "locator": "lines 23-28; 33-34; interposer layer thickness",
+      "values_si": {"copper_thermal_resistivity_mk_w": 0.0025, "copper_cv_j_m3k": 3494400},
+      "derivation": "Copper k=1/0.0025=400 W/(m K); this is thermal resistivity, never electrical resistivity.",
+      "limitation": "Only constituent copper properties reused. No effective TSV copper fraction added to explicit H1 copper."
+    },
+    "coppeta2018_table1": {
+      "title": "Coppeta, Hartler, Siegert. J-integral evaluation for cracks in Through Silicon Vias. COMSOL Conference Lausanne, 2018",
+      "url": "https://cn.comsol.com/paper/download/570181/coppeta_paper.pdf",
+      "locator": "PDF page 2, Table 1; primary full PDF read",
+      "values_si": {
+        "silicon": {"young_pa": 135000000000, "poisson": 0.28, "cte_per_k": 0.0000026, "rho_kg_m3": 2329},
+        "silica": {"young_pa": 70000000000, "poisson": 0.17, "cte_per_k": 0.0000005},
+        "copper": {"young_pa": 120000000000, "poisson": 0.34, "cte_per_k": 0.0000165, "rho_kg_m3": 8960}
+      },
+      "limitation": "Only listed constant isotropic values reused for testing. Printed silica density 220 kg/m3 is not adopted. Cooling process, geometry and fully fixed bottom not adopted."
+    },
+    "memori2023_table2": {
+      "title": "Hung, Pan, Chen. Stress Issue of Vertical Connections in 3D Integration for High-Bandwidth Memory Applications. Memories 4 (2023) 100024",
+      "url": "https://doi.org/10.1016/j.memori.2023.100024",
+      "locator": "Table 2, SiO2 column; publisher-indexed table verified; direct full-page request returned HTTP 403",
+      "values_si": {"silica_k_w_mk": 1.4, "silica_cp_j_kgk": 730, "silica_rho_kg_m3": 2200},
+      "derivation": "Cv=730*2200=1606000 J/(m3 K)",
+      "limitation": "No adoption of the paper's anneal history, Cu plasticity or alternative silicon properties."
+    },
+    "explicit_fixture_definition": {
+      "kind": "declared_test_definition_not_empirical_parameter",
+      "authority": "User requested minimal consistent case and parameter package; implementation spec docs/MINIMAL_COUPON_SPEC.md",
+      "covers": "H1 rectangular geometry/liner/positions, mesh levels, artificial 300 K stress-free state and 10 K increment, ideal contact, isotropic linear elasticity, numerical acceptance targets",
+      "limitation": "These definitions do not close any research parameter gaps; no yield/allowable stress is inferred."
+    }
+  }
+}

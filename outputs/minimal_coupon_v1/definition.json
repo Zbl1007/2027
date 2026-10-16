@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "case_family": "3dice_comsol_minimal_v1",
+  "fidelity": "synthetic_fixture",
+  "research_parameter_adoption": false,
+  "units": "SI",
+  "materials": {
+    "silicon": {
+      "k_w_mk": 130.0,
+      "cv_j_m3k": 1635660.0,
+      "young_pa": 135000000000.0,
+      "poisson": 0.28,
+      "cte_per_k": 2.6e-06,
+      "thermal_source": "ice_solid",
+      "mechanical_source": "coppeta2018_table1",
+      "rho_kg_m3": 2329,
+      "density_source": "coppeta2018_table1",
+      "cp_j_kgk": 702.3014169171319,
+      "cp_definition": "derived Cv/rho for input consistency; steady thermal and static mechanics only, no transient validation"
+    },
+    "copper": {
+      "k_w_mk": 400.0,
+      "cv_j_m3k": 3494400.0,
+      "young_pa": 120000000000.0,
+      "poisson": 0.34,
+      "cte_per_k": 1.65e-05,
+      "thermal_source": "tap_thermal",
+      "mechanical_source": "coppeta2018_table1",
+      "rho_kg_m3": 8960,
+      "density_source": "coppeta2018_table1",
+      "cp_j_kgk": 390.0,
+      "cp_definition": "derived Cv/rho for input consistency; steady thermal and static mechanics only, no transient validation"
+    },
+    "silica": {
+      "k_w_mk": 1.4,
+      "cv_j_m3k": 1606000.0,
+      "young_pa": 70000000000.0,
+      "poisson": 0.17,
+      "cte_per_k": 5e-07,
+      "thermal_source": "memori2023_table2",
+      "mechanical_source": "coppeta2018_table1",
+      "rho_kg_m3": 2200,
+      "density_source": "memori2023_table2",
+      "cp_j_kgk": 730.0,
+      "cp_definition": "derived Cv/rho for input consistency; steady thermal and static mechanics only, no transient validation"
+    }
+  },
+  "thermal_boundary": {
+    "ambient_k": 300.0,
+    "top_h_w_m2k": 100000.0,
+    "other_faces": "adiabatic",
+    "source": "ice_solid",
+    "interface": "perfect_thermal_contact"
+  },
+  "h0": {
+    "size_m": [
+      0.01,
+      0.01,
+      0.0001
+    ],
+    "power_w": 50.0,
+    "source": "ice_solid_and_background_derived",
+    "definition": "10 mm square from upstream solid example; 100 um is its two 50 um dies combined; 50 W from background.flp, redistributed uniformly through this single continuous solid for an analytic test",
+    "z_cells": [
+      4,
+      8,
+      16
+    ],
+    "xy_subdivisions": 1
+  },
+  "h1": {
+    "size_m": [
+      5e-05,
+      5e-05,
+      0.00011
+    ],
+    "core_side_m": 1e-05,
+    "liner_width_m": 1e-06,
+    "centres_m": {
+      "centered": [
+        2.5e-05,
+        2.5e-05
+      ],
+      "shifted": [
+        1.7e-05,
+        2.5e-05
+      ]
+    },
+    "q_silicon_w_m3": 5000000000.0,
+    "heat_source_material": "silicon",
+    "mesh_levels": [
+      [
+        2,
+        4
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        8,
+        16
+      ]
+    ],
+    "source": "explicit_fixture_definition",
+    "definition": "Rectangular core and rectangular liner are a fully specified interface test, NOT cylindrical TSV geometry or adopted process data. 50/110/10 um scales are motivated by TAP code; shape, 1 um liner, centres and grids are computational test definitions. q is H0 power divided by H0 volume. Copper and silica have explicitly zero imposed volumetric heating."
+  },
+  "mechanical": {
+    "reference_k": 300.0,
+    "uniform_delta_k": 10.0,
+    "source": "explicit_fixture_definition",
+    "reference_meaning": "Artificial stress-free reference for linear-elastic verification only; not an assembly/anneal reference for TAP",
+    "interface": "perfect_bond",
+    "material_model": "constant_isotropic_small_strain_linear_elastic",
+    "sigma_allow_pa": null,
+    "solved_stress_pa": null
+  },
+  "acceptance": {
+    "source": "explicit_verification_targets_not_industry_limits",
+    "h0_finest_max_error_k": 0.001,
+    "h0_error_ratio_min": 3.5,
+    "h0_error_ratio_max": 4.5,
+    "external_temperature_max_error_k": 0.05,
+    "external_power_relative_error": 0.001,
+    "mechanical_relative_error": 0.01,
+    "free_expansion_max_stress_pa": 1000.0,
+    "coordinate_tolerance_m": 1e-10,
+    "notes": "External thermal threshold is an initial coupon acceptance target, not a validated position-effect resolution. H1 requires its own mesh and external-reference evidence.",
+    "comsol_mesh_change_max_k": 0.005
+  }
+}

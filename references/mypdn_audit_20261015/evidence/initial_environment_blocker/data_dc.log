@@ -1,0 +1,255 @@
+
+==================================== ERRORS ====================================
+_______________ ERROR collecting tests/cases/test_case_bundle.py _______________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/cases/test_case_bundle.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/cases/test_case_bundle.py:10: in <module>
+    from cowos_l_tiv.cases import CaseValidationError, build_case_report, load_case_bundle
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+____________ ERROR collecting tests/cases/test_case_cli_contract.py ____________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/cases/test_case_cli_contract.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/cases/test_case_cli_contract.py:7: in <module>
+    from cowos_l_tiv.cases.cli import _parser, _resolve_path_argument
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+_________ ERROR collecting tests/cases/test_case_compiler_negative.py __________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/cases/test_case_compiler_negative.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/cases/test_case_compiler_negative.py:3: in <module>
+    from cowos_l_tiv.cases.compiler import compute_cache_key
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+______________ ERROR collecting tests/cases/test_grid_mapping.py _______________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/cases/test_grid_mapping.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/cases/test_grid_mapping.py:10: in <module>
+    from cowos_l_tiv.cases import CaseValidationError
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+_______________ ERROR collecting tests/unit/test_config_units.py _______________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_config_units.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_config_units.py:5: in <module>
+    from cowos_l_tiv.config import ConfigError, UnitError, load_design
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+________________ ERROR collecting tests/unit/test_schema_v2.py _________________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_schema_v2.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_schema_v2.py:5: in <module>
+    from cowos_l_tiv.config import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+______________ ERROR collecting tests/unit/test_dc_activation.py _______________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/unit/test_dc_activation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_dc_activation.py:6: in <module>
+    from cowos_l_tiv.builders.dc_builder import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+__________ ERROR collecting tests/golden/test_dc_builder_analytic.py ___________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_dc_builder_analytic.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/golden/test_dc_builder_analytic.py:7: in <module>
+    from cowos_l_tiv.builders import (
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+________ ERROR collecting tests/golden/test_multi_ground_dc_builder.py _________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_multi_ground_dc_builder.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/golden/test_multi_ground_dc_builder.py:7: in <module>
+    from cowos_l_tiv.analysis.dc_v2 import save_dc_v2_result, solve_dc_v2
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+___________ ERROR collecting tests/golden/test_site_option_dc_v2.py ____________
+ImportError while importing test module '/Users/zbl/Desktop/docker/code/mypdn/tests/golden/test_site_option_dc_v2.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Users/zbl/opt/anaconda3/envs/mcp_claude/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/golden/test_site_option_dc_v2.py:5: in <module>
+    from cowos_l_tiv.analysis.dc_v2 import solve_dc_v2
+cowos_l_tiv/__init__.py:3: in <module>
+    from .config import ConfigError, DesignSpec, load_design, save_resolved_config
+cowos_l_tiv/config/__init__.py:3: in <module>
+    from .loader import load_design, save_resolved_config, to_resolved_dict
+cowos_l_tiv/config/loader.py:42: in <module>
+    from .v2 import load_v2_design, v2_to_resolved_dict
+cowos_l_tiv/config/v2.py:12: in <module>
+    from cowos_l_tiv.cases.compiler import load_compiled_artifacts
+cowos_l_tiv/cases/__init__.py:3: in <module>
+    from .compiler import (
+cowos_l_tiv/cases/compiler.py:19: in <module>
+    from .compiled_report import generate_compiled_case_report
+cowos_l_tiv/cases/compiled_report.py:7: in <module>
+    import matplotlib
+E   ModuleNotFoundError: No module named 'matplotlib'
+=========================== short test summary info ============================
+ERROR tests/cases/test_case_bundle.py
+ERROR tests/cases/test_case_cli_contract.py
+ERROR tests/cases/test_case_compiler_negative.py
+ERROR tests/cases/test_grid_mapping.py
+ERROR tests/unit/test_config_units.py
+ERROR tests/unit/test_schema_v2.py
+ERROR tests/unit/test_dc_activation.py
+ERROR tests/golden/test_dc_builder_analytic.py
+ERROR tests/golden/test_multi_ground_dc_builder.py
+ERROR tests/golden/test_site_option_dc_v2.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 10 errors during collection !!!!!!!!!!!!!!!!!!!
+10 errors in 2.25s

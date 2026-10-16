@@ -1,0 +1,16 @@
+--- a/sources/stack_element.c
++++ b/sources/stack_element.c
+@@ -379,11 +379,11 @@
+ 
+         // Temperature data (assigning values to each hexahedron)
+         fprintf(filevtk, "CELL_DATA %d\n", num_elements);
+-        fprintf(filevtk, "SCALARS Temperature float 1\n");
++        fprintf(filevtk, "SCALARS Temperature double 1\n");
+         fprintf(filevtk, "LOOKUP_TABLE default\n");
+         for (CellIndex_t i = 0; i < num_elements; i++) 
+         {
+-            fprintf(filevtk, "%7.3f\n", *(temperatures+counter));
++            fprintf(filevtk, "%.17g\n", *(temperatures+counter));
+             counter++;
+         }
+ 

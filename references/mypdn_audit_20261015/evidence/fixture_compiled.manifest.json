@@ -1,0 +1,127 @@
+{
+  "analysis_extent_m": {
+    "height": 0.0008,
+    "width": 0.001
+  },
+  "artifact_hashes": {
+    "candidate_eligibility.npy": "2c9dd775a808c0f36bb8c236da29a96e862f276dd9c55e6b5c93f1d4cadbbf7d",
+    "case_report.md": "1e0f3cb8d5f9180b56a5333792c707a14b41236616a12aa952431812c9551c74",
+    "config.resolved.json": "57be184758facec8d4eb32cd12046d4367deca4bdc680ffc1be5ebd6f761b2aa",
+    "electrical_active_fraction.npy": "f914095504bc086d9de6333a6f3e107478a78a48f6b954545112137e1abd5b00",
+    "electrical_load_points.npz": "cc27c92cedb2a40d95800b8a7df68b67a2da498b7cc57f649446ba711f3bb834",
+    "instance_to_thermal_cell.metadata.json": "4223c79d13a518d55951439a04e8a528247cab1322bc48468758cb1eb9f9073f",
+    "instance_to_thermal_cell.npz": "abd02ee53d7eab68675e431928473169fcd107cb2c272177089409dca683b3bb",
+    "mapping_summary.json": "0c3a7730f99ddc5d2e93ffec3dea3668aa2db9f3c1ad94ba22087e56b631e15a",
+    "normalized_case.json": "2b25a69ceeda94d54ee3f569a5f5fc07c992fbd2a90e0f35e337f103a196c027",
+    "package_terminal_map.png": "6fe8c16f710d60d67b7006ff1524f53859e618db4020ad6891869aa373911fc8",
+    "package_terminals.npz": "bb49dbbef0b321ae7a71698370eee21612ba1484b0c0e3265e8852b5ff475b5d",
+    "padding_active_region_map.png": "4258c4dc20bc8519128aeb12eaf3e3f1304d7bbce774f4335c66c75e519d3b87",
+    "per_rail_load_map.png": "61fe8302f655b04be1bdf1580dbf6c09922f79ac7fb8f1526a74ff77e7746d7d",
+    "physical_layout.png": "933d190ce1166bfc9a430b7b8fb84090e80c253b45f27b0da5fb1124fda6701f",
+    "terminal_to_electrical_cell.metadata.json": "4223c79d13a518d55951439a04e8a528247cab1322bc48468758cb1eb9f9073f",
+    "terminal_to_electrical_cell.npy": "457b6b5856848ca5327b783ecfa3d295bced2755a79575511f417218d865f788",
+    "thermal_active_fraction.npy": "f914095504bc086d9de6333a6f3e107478a78a48f6b954545112137e1abd5b00",
+    "thermal_instance_power.json": "598d9f446bd36aefcb741bd04c9abc58ae5887c4afba7e2dd1eed678399b9286",
+    "thermal_instance_power_map.png": "b0adce45243794a1e62309560ecdb7d21104adc11cde9d9a532670d9120cfad5",
+    "thermal_power_map.npy": "850d2a1e705845d8b3c39acd0bca3449aff5c70d0cf17632f542e157a9cbf111"
+  },
+  "cache_key": "6a3640e6b0dc30ae6050d3a88a18827c692a8b1646d265915f3ffa5e31941434",
+  "candidate_policy": {
+    "final_candidate_mask": false,
+    "meaning": "cell_is_fully_inside_native_extent_only",
+    "scope": "padding_gate_only"
+  },
+  "case_id": "minimal",
+  "case_manifest_hash": "2031bb2d90a39452210b7b5da763857972b0a10b8753aa15a8b59ba2d27c6e75",
+  "compile_config_hash": "1815e641caf14c56ceabcbc3dafa11dbf0e752b68e49d7b7c1b4631bbcfa8ec6",
+  "compiler": {
+    "git": {
+      "commit": "373645e631af872be175e9966c82b3a0d6ae460f",
+      "source": "git_rev_parse"
+    },
+    "schema_version": 1,
+    "version": "b2.2"
+  },
+  "conservation": {
+    "all_current_conserved": true,
+    "instance_overlap_rows_normalized": true,
+    "padding_candidate_count": 0,
+    "padding_load_count": 0,
+    "thermal_grid_power_conserved": true,
+    "thermal_power_conserved": true
+  },
+  "generated_design_hash": "2e614b03fd0b9548c1b7c210902df8b81667ebe9c1b1bde5b3028a120293e309",
+  "grids": {
+    "electrical": {
+      "columns": 5,
+      "pitch_x_m": 0.0002,
+      "pitch_y_m": 0.0002,
+      "rows": 4
+    },
+    "thermal": {
+      "columns": 5,
+      "pitch_x_m": 0.0002,
+      "pitch_y_m": 0.0002,
+      "rows": 4
+    }
+  },
+  "native_extent_m": {
+    "height": 0.0008,
+    "width": 0.001
+  },
+  "package_terminal_policy": {
+    "forced_current_sources_created": false,
+    "interposer_current": "expected_allocation_capacity_metadata_only",
+    "package_ground_relationship": "unspecified",
+    "power_and_ground_coordinates": "preserved_independently"
+  },
+  "padding": {
+    "area_ratio": 0.0,
+    "origin_policy": "lower_left_fixed_right_top_pad",
+    "right_m": 0.0,
+    "top_m": 0.0
+  },
+  "physical_extension": {
+    "c4": "not_modeled_phase_b2",
+    "fixed_dtc_lsi": "not_modeled_phase_b2",
+    "parameters_added": false,
+    "rdl": "not_modeled_phase_b2",
+    "tiv": "not_modeled_phase_b2"
+  },
+  "power_authority": {
+    "electrical": "netlist_chiplet_bump_current",
+    "floorplan_declared_power": "independent_reference",
+    "thermal_spatial": "uniform_within_physical_instance_exact_area_overlap",
+    "thermal_total": "netlist_iv_power"
+  },
+  "raw_hashes": {
+    "floorplan": "354cf26d507cca9295202498cb3c3f9f750a18cb1d1e4f5c9b1c08a71ad21368",
+    "netlist": "bb2cc9d32480c30a6727b9f7d2380f3da616f2cacb35559e71369878801589a5",
+    "power_report": "3d3fc2c747496b824f903fc7d751cc27fd5962d9ab66f51eb7a9a6357dba3360"
+  },
+  "raw_to_normalized_transform": "strict_parser_to_si",
+  "reserved_regions": {
+    "count": 0,
+    "semantic_role": "unspecified",
+    "used_as_keepout": false
+  },
+  "resolved_config_hash": "364bca2230c7a784e4c67b78f914cbe2eb67b4cf88721799b63ceb21050d2f77",
+  "schema_version": 1,
+  "supply_pairs": [
+    {
+      "name": "one_volt",
+      "nominal_voltage_v": 1.0,
+      "power_net": "VDD",
+      "return_net": "VSS"
+    }
+  ],
+  "validation_gates": {
+    "artifact_hashes": "pass",
+    "current_conservation": "pass",
+    "padding": "pass",
+    "rectangle_overlap_normalization": "pass",
+    "terminal_mapping": "pass",
+    "thermal_grid_power_conservation": "pass",
+    "thermal_power_conservation": "pass"
+  }
+}

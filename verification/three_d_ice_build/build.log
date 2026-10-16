@@ -1,0 +1,163 @@
+['make', '-C', '/Users/zbl/Desktop/docker/code/tap25d-etm/external/3d-ice/superlu_mt-4.0.0/SRC', 'double', '-j4']
+ar cr ../lib/libsuperlu_mt_OPENMP.a dreadhb.o dreadrb.o dreadmt.o dmatgen.o pdgssv.o pdgssvx.o dgstrs.o dgsrfs.o dgscon.o dlacon.o dlangs.o dgsequ.o dlaqgs.o dpivotgrowth.o pdmemory.o pdutil.o dmyblas2.o pdgstrf.o pdgstrf_init.o pdgstrf_thread.o pdgstrf_thread_init.o pdgstrf_thread_finalize.o pdgstrf_factor_snode.o pdgstrf_snode_dfs.o pdgstrf_snode_bmod.o pdgstrf_panel_dfs.o pdgstrf_panel_bmod.o pdgstrf_copy_to_ucol.o pdgstrf_pivotL.o pdgstrf_column_dfs.o pdgstrf_column_bmod.o pdgstrf_bmod1D.o pdgstrf_bmod2D.o pdgstrf_bmod1D_mv2.o pdgstrf_bmod2D_mv2.o dsp_blas2.o dsp_blas3.o  superlu_timer.o dclock.o sp_ienv.o lsame.o xerbla.o dlaran.o util.o pmemory.o qrnzcnt.o cholnzcnt.o await.o get_perm_c.o mmd.o colamd.o sp_coletree.o pxgstrf_scheduler.o sp_colorder.o pxgstrf_mark_busy_descends.o pxgstrf_pruneL.o pxgstrf_super_bnd_dfs.o pxgstrf_relax_snode.o heap_relax_snode.o pxgstrf_synch.o pxgstrf_finalize.o dlamch.o
+ranlib ../lib/libsuperlu_mt_OPENMP.a
+['make', 'all', 'CC=/usr/bin/clang', 'YACC=/opt/homebrew/opt/bison/bin/bison', 'CFLAGS=-MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include', 'SLU_LIBS=-L/Users/zbl/Desktop/docker/code/tap25d-etm/external/3d-ice/superlu_mt-4.0.0/lib -lsuperlu_mt_OPENMP -L/opt/homebrew/opt/openblas/lib -lopenblas -L/opt/homebrew/opt/libomp/lib -lomp']
+cd ./flex    ; make ;
+make[1]: Nothing to be done for `all'.
+cd ./bison   ; make ;
+/opt/homebrew/opt/bison/bin/bison -d floorplan_parser.y
+floorplan_parser.y:102.1-32: warning: deprecated directive: '%name-prefix "floorplan_parser_"', use '%define api.prefix {floorplan_parser_}' [-Wdeprecated]
+  102 | %name-prefix "floorplan_parser_"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | %define api.prefix {floorplan_parser_}
+floorplan_parser.y:105.1-12: warning: deprecated directive: '%pure-parser', use '%define api.pure' [-Wdeprecated]
+  105 | %pure-parser
+      | ^~~~~~~~~~~~
+      | %define api.pure
+floorplan_parser.y:107.1-14: warning: deprecated directive: '%error-verbose', use '%define parse.error verbose' [-Wdeprecated]
+  107 | %error-verbose
+      | ^~~~~~~~~~~~~~
+      | %define parse.error verbose
+floorplan_parser.y: warning: fix-its can be applied.  Rerun with option '--update'. [-Wother]
+/opt/homebrew/opt/bison/bin/bison -d layout_parser.y
+layout_parser.y:107.1-29: warning: deprecated directive: '%name-prefix "layout_parser_"', use '%define api.prefix {layout_parser_}' [-Wdeprecated]
+  107 | %name-prefix "layout_parser_"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | %define api.prefix {layout_parser_}
+layout_parser.y:110.1-12: warning: deprecated directive: '%pure-parser', use '%define api.pure' [-Wdeprecated]
+  110 | %pure-parser
+      | ^~~~~~~~~~~~
+      | %define api.pure
+layout_parser.y:112.1-14: warning: deprecated directive: '%error-verbose', use '%define parse.error verbose' [-Wdeprecated]
+  112 | %error-verbose
+      | ^~~~~~~~~~~~~~
+      | %define parse.error verbose
+layout_parser.y: warning: fix-its can be applied.  Rerun with option '--update'. [-Wother]
+/opt/homebrew/opt/bison/bin/bison -d stack_description_parser.y
+stack_description_parser.y:215.1-33: warning: deprecated directive: '%name-prefix "stack_description_"', use '%define api.prefix {stack_description_}' [-Wdeprecated]
+  215 | %name-prefix "stack_description_"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | %define api.prefix {stack_description_}
+stack_description_parser.y:218.1-12: warning: deprecated directive: '%pure-parser', use '%define api.pure' [-Wdeprecated]
+  218 | %pure-parser
+      | ^~~~~~~~~~~~
+      | %define api.pure
+stack_description_parser.y:219.1-14: warning: deprecated directive: '%error-verbose', use '%define parse.error verbose' [-Wdeprecated]
+  219 | %error-verbose
+      | ^~~~~~~~~~~~~~
+      | %define parse.error verbose
+stack_description_parser.y: warning: fix-its can be applied.  Rerun with option '--update'. [-Wother]
+cd ./sources ; make ;
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/analysis.c -o ../sources/analysis.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/channel.c -o ../sources/channel.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/coolant.c -o ../sources/coolant.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/die.c -o ../sources/die.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/die_list.c -o ../sources/die_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/dimensions.c -o ../sources/dimensions.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/floorplan_element.c -o ../sources/floorplan_element.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/floorplan_element_list.c -o ../sources/floorplan_element_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/floorplan_file_parser.c -o ../sources/floorplan_file_parser.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/floorplan_matrix.c -o ../sources/floorplan_matrix.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/floorplan.c -o ../sources/floorplan.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/heat_sink.c -o ../sources/heat_sink.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/ic_element.c -o ../sources/ic_element.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/ic_element_list.c -o ../sources/ic_element_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/inspection_point.c -o ../sources/inspection_point.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/inspection_point_list.c -o ../sources/inspection_point_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/layer.c -o ../sources/layer.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/layer_list.c -o ../sources/layer_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/layout_file_parser.c -o ../sources/layout_file_parser.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/material.c -o ../sources/material.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/material_list.c -o ../sources/material_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/material_element.c -o ../sources/material_element.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/material_element_list.c -o ../sources/material_element_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/network_message.c -o ../sources/network_message.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/network_socket.c -o ../sources/network_socket.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/output.c -o ../sources/output.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/power_grid.c -o ../sources/power_grid.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/powers_queue.c -o ../sources/powers_queue.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/stack_description.c -o ../sources/stack_description.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/stack_element.c -o ../sources/stack_element.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/stack_element_list.c -o ../sources/stack_element_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/stack_file_parser.c -o ../sources/stack_file_parser.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/system_matrix.c -o ../sources/system_matrix.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/string_t.c -o ../sources/string_t.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/thermal_data.c -o ../sources/thermal_data.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/thermal_grid.c -o ../sources/thermal_grid.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/connection.c -o ../sources/connection.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/connection_list.c -o ../sources/connection_list.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/non_uniform_cell.c -o ../sources/non_uniform_cell.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../sources/non_uniform_cell_list.c -o ../sources/non_uniform_cell_list.o
+cd ./lib     ; make ;
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../flex/floorplan_scanner.c -o ../flex/floorplan_scanner.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../flex/layout_scanner.c -o ../flex/layout_scanner.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../flex/stack_description_scanner.c -o ../flex/stack_description_scanner.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../bison/floorplan_parser.c -o ../bison/floorplan_parser.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../bison/layout_parser.c -o ../bison/layout_parser.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c ../bison/stack_description_parser.c -o ../bison/stack_description_parser.o
+stack_description_parser.y:1343:17: warning: format specifies type 'unsigned long' but the argument has type 'uint64_t' (aka 'unsigned long long') [-Wformat]
+ 1342 |                 "%lu are too many cells ... (SuperLU uses 'int')",
+      |                  ~~~
+      |                  %llu
+ 1343 |                 ncells) ;
+      |                 ^~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+1 warning generated.
+ar: creating archive ../lib/libthreed-ice-4.0.0.a
+a - ../flex/floorplan_scanner.o
+a - ../flex/layout_scanner.o
+a - ../flex/stack_description_scanner.o
+a - ../bison/floorplan_parser.o
+a - ../bison/layout_parser.o
+a - ../bison/stack_description_parser.o
+a - ../sources/analysis.o
+a - ../sources/channel.o
+a - ../sources/coolant.o
+a - ../sources/die.o
+a - ../sources/die_list.o
+a - ../sources/dimensions.o
+a - ../sources/floorplan_element.o
+a - ../sources/floorplan_element_list.o
+a - ../sources/floorplan_file_parser.o
+a - ../sources/floorplan_matrix.o
+a - ../sources/floorplan.o
+a - ../sources/heat_sink.o
+a - ../sources/ic_element.o
+a - ../sources/ic_element_list.o
+a - ../sources/inspection_point.o
+a - ../sources/inspection_point_list.o
+a - ../sources/layer.o
+a - ../sources/layer_list.o
+a - ../sources/layout_file_parser.o
+a - ../sources/material.o
+a - ../sources/material_list.o
+a - ../sources/material_element.o
+a - ../sources/material_element_list.o
+a - ../sources/network_message.o
+a - ../sources/network_socket.o
+a - ../sources/output.o
+a - ../sources/power_grid.o
+a - ../sources/powers_queue.o
+a - ../sources/stack_description.o
+a - ../sources/stack_element.o
+a - ../sources/stack_element_list.o
+a - ../sources/stack_file_parser.o
+a - ../sources/system_matrix.o
+a - ../sources/string_t.o
+a - ../sources/thermal_data.o
+a - ../sources/thermal_grid.o
+a - ../sources/connection.o
+a - ../sources/connection_list.o
+a - ../sources/non_uniform_cell.o
+a - ../sources/non_uniform_cell_list.o
+cd ./bin ; make ;
+Makefile:76: warning: overriding commands for target `3D-ICE-SystemC-Client'
+Makefile:72: warning: ignoring old commands for target `3D-ICE-SystemC-Client'
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c 3D-ICE-Emulator.c -o 3D-ICE-Emulator.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include  3D-ICE-Emulator.o ../lib/libthreed-ice-4.0.0.a -L/Users/zbl/Desktop/docker/code/tap25d-etm/external/3d-ice/superlu_mt-4.0.0/lib -lsuperlu_mt_OPENMP -L/opt/homebrew/opt/openblas/lib -lopenblas -L/opt/homebrew/opt/libomp/lib -lomp -lm -ldl -o 3D-ICE-Emulator
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c 3D-ICE-Client.c -o 3D-ICE-Client.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include 3D-ICE-Client.o ../lib/libthreed-ice-4.0.0.a -L/Users/zbl/Desktop/docker/code/tap25d-etm/external/3d-ice/superlu_mt-4.0.0/lib -lsuperlu_mt_OPENMP -L/opt/homebrew/opt/openblas/lib -lopenblas -L/opt/homebrew/opt/libomp/lib -lomp -lm -ldl -o 3D-ICE-Client
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include -I../include -I../superlu_mt-4.0.0/SRC -c 3D-ICE-Server.c -o 3D-ICE-Server.o
+/usr/bin/clang -MD -std=gnu11 -O2 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -fcommon -Wno-error=implicit-function-declaration -I/opt/homebrew/opt/openblas/include 3D-ICE-Server.o ../lib/libthreed-ice-4.0.0.a -L/Users/zbl/Desktop/docker/code/tap25d-etm/external/3d-ice/superlu_mt-4.0.0/lib -lsuperlu_mt_OPENMP -L/opt/homebrew/opt/openblas/lib -lopenblas -L/opt/homebrew/opt/libomp/lib -lomp -lm -ldl -o 3D-ICE-Server

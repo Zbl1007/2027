@@ -1,0 +1,10 @@
+...............                                                          [100%]
+=============================== warnings summary ===============================
+tests/golden/test_fresh_hard_constraints_v2.py::test_repeated_calls_are_fresh_rebuilds_with_stable_constraints
+tests/golden/test_fresh_hard_constraints_v2.py::test_soft_and_stale_hard_placements_are_rejected
+tests/golden/test_fresh_hard_constraints_v2.py::test_fresh_hard_constraints_match_across_backends[scipy]
+  /Users/zbl/Desktop/docker/code/mypdn/OpSimulation.py:263: SparseEfficiencyWarning: splu converted its input to CSC format
+    self.LU = splu(G)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+15 passed, 3 warnings in 4.19s

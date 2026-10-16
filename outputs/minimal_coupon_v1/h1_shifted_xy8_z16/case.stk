@@ -1,0 +1,44 @@
+material copper:
+ thermal conductivity 0.00039999999999999996;
+ volumetric heat capacity 3.4944000000000001e-12;
+
+material silica:
+ thermal conductivity 1.3999999999999999e-06;
+ volumetric heat capacity 1.606e-12;
+
+material silicon:
+ thermal conductivity 0.00012999999999999999;
+ volumetric heat capacity 1.6356600000000001e-12;
+
+top heat sink:
+ heat transfer coefficient 9.9999999999999995e-08;
+ temperature 300;
+dimensions:
+ chip length 50, width 50;
+ cell length 50, width 50;
+ non-uniform true;
+die slice:
+ source 6.875 silicon;
+stack:
+ die layer15 slice floorplan "source.flp";
+ die layer14 slice floorplan "source.flp";
+ die layer13 slice floorplan "source.flp";
+ die layer12 slice floorplan "source.flp";
+ die layer11 slice floorplan "source.flp";
+ die layer10 slice floorplan "source.flp";
+ die layer9 slice floorplan "source.flp";
+ die layer8 slice floorplan "source.flp";
+ die layer7 slice floorplan "source.flp";
+ die layer6 slice floorplan "source.flp";
+ die layer5 slice floorplan "source.flp";
+ die layer4 slice floorplan "source.flp";
+ die layer3 slice floorplan "source.flp";
+ die layer2 slice floorplan "source.flp";
+ die layer1 slice floorplan "source.flp";
+ die layer0 slice floorplan "source.flp";
+solver:
+ steady;
+ initial temperature 300;
+ numofcores 1;
+output:
+ T3d("temperature.vtk", final);

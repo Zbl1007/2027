@@ -1,0 +1,210 @@
+{
+  "checked_at": "2026-10-16T08:12:32.974897+00:00",
+  "scope": "synthetic_thermal_fixtures_only",
+  "h0_analytic_pass": true,
+  "h0_error_ratios": [
+    4.000000014165416,
+    4.000000013620593
+  ],
+  "cases": [
+    {
+      "case_id": "h0_z4",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "0cb33f212532c8e31b728ad7e011152287d209a9d6d94102328d1c166011e97a",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 4,
+      "min_temperature_k": 305.0480769230771,
+      "max_temperature_k": 305.204326923077,
+      "volume_mean_temperature_k": 305.135216346154,
+      "total_power_w": 50.0,
+      "reconstructed_top_outward_heat_w": 50.000000000001506,
+      "heat_balance_relative_error": 3.012701199622825e-14,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "ae3ad66407fc824b75e5b7d8079367d76c5412e3e8bb63606a12e06ff93890ec",
+        "3dice_field.csv": "77a2cc095af77f2b272f5c31344a249a96801837a9320d0ddbdf064281bc2f74",
+        "sample_points_m.txt": "bf74fa477810be36e57eaf991bf000d7db5ae40b7ad69313993194f0dce97bbd",
+        "3dice.log": "2c1bc3df64881de1fef97fd18a11d31227d7dc87ee5d10861e84989653945c92"
+      },
+      "analytic_max_error_k": 0.015024038461660894
+    },
+    {
+      "case_id": "h0_z8",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "48ce528125f89572b0061c3be335091c2a6ee1ceaec0bd3d7e273d3eac63e7f3",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 8,
+      "min_temperature_k": 305.02403846152566,
+      "max_temperature_k": 305.19531249998676,
+      "volume_mean_temperature_k": 305.1295823317177,
+      "total_power_w": 50.0,
+      "reconstructed_top_outward_heat_w": 49.99999999987259,
+      "heat_balance_relative_error": 2.5481483589828713e-12,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "fc5a6d04bcfbdad011778aad2a5acd4bfa91b0fa118c216b5676b53e497b5613",
+        "3dice_field.csv": "d71e710edae9f78ed22540063947e6aef68b4f40a219d3c1e8f0facd6655c12c",
+        "sample_points_m.txt": "c5a514a04bd27f134e9ae0fb1182cf7c79afd17df874c645d5d3cddf0c77a792",
+        "3dice.log": "f06f733c7625e38a655c730605cdb7e5f4419f8eb6e7f9e2edeb3c116b973885"
+      },
+      "analytic_max_error_k": 0.0037560096021138634
+    },
+    {
+      "case_id": "h0_z16",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "9236da07173ad18aa28bfdad8ac1c0764983b3f1b507fb001535263f97c863c7",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 16,
+      "min_temperature_k": 305.0120192307624,
+      "max_temperature_k": 305.19305889422424,
+      "volume_mean_temperature_k": 305.1285024789596,
+      "total_power_w": 50.0,
+      "reconstructed_top_outward_heat_w": 49.999999999931816,
+      "heat_balance_relative_error": 1.3636736184707842e-12,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "7c3834717539572d6667d7041dedbca4b73a38f506cf5574167ec9fd9009f5cd",
+        "3dice_field.csv": "ae801e849e8e05ba19f85106cafbc8bb07382b718646e95d294fa54fa42e98bd",
+        "sample_points_m.txt": "80b1ba955be7461ea2cdd29145eb1e5f274f61bd7c8a66b718e57f4d055f7732",
+        "3dice.log": "f054086993cf957bd556cf16945fe12e9bf1684c72e928e02d091601717256db"
+      },
+      "analytic_max_error_k": 0.0009390023973310235
+    },
+    {
+      "case_id": "h1_centered_xy2_z4",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "42811d0a0b3f22f71b06ac2e58ab7d197a4582570edad77db272bba2be944e43",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 144,
+      "min_temperature_k": 305.28135906405464,
+      "max_temperature_k": 305.45307930235373,
+      "volume_mean_temperature_k": 305.37694225763465,
+      "total_power_w": 0.0012958,
+      "reconstructed_top_outward_heat_w": 0.0012958000000032088,
+      "heat_balance_relative_error": 2.4763117376818175e-12,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "48275eb07644b3a2f2ea8620dcbf4d4b03be2d10607222786e0ffb17d5e88519",
+        "3dice_field.csv": "98e4a31b67ec873ec3f9d89d50a9f633b19d0bef1faa61bd6fe7f9857073d99d",
+        "sample_points_m.txt": "8c93a58802bfb08562323392fd5e24bcbd3830eb10fbb3bb555db7891d8a88ae",
+        "3dice.log": "68f4153d1d306af1af8f5b32e954975ffb0d02a314d87dc01797031ad1dbeb7e"
+      }
+    },
+    {
+      "case_id": "h1_centered_xy4_z8",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "fc0000e2ad593b0e0d2219534e3d487534188149fa4fe4b56fe499c24b114fe8",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 1152,
+      "min_temperature_k": 305.2386157320131,
+      "max_temperature_k": 305.42765181536544,
+      "volume_mean_temperature_k": 305.3550900590203,
+      "total_power_w": 0.0012958,
+      "reconstructed_top_outward_heat_w": 0.0012958000000221556,
+      "heat_balance_relative_error": 1.7098064049036334e-11,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "9ee1a5bfd217c39692c1597f6ad93686d15e9dc412e3c240f8355fbe520e452f",
+        "3dice_field.csv": "e4d359409faa2af9c23cf9c6ddcf5229e403f8517c01a1ddbf45babb10356476",
+        "sample_points_m.txt": "5f78f27998236d339d4343778ced7646f0343a9542260555d9c66df8666a9031",
+        "3dice.log": "d060d38a22b0f4e110a3889ad0e225b82c0983afc4db2e869815452d6ebb3157"
+      }
+    },
+    {
+      "case_id": "h1_centered_xy8_z16",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "6f1857425a6516ffcf2f7e865dad91cd5ca341a9de2669e31ac7801d5fd3038f",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 9216,
+      "min_temperature_k": 305.2129004632505,
+      "max_temperature_k": 305.4129317910974,
+      "volume_mean_temperature_k": 305.3416958811329,
+      "total_power_w": 0.0012958,
+      "reconstructed_top_outward_heat_w": 0.0012958000000355394,
+      "heat_balance_relative_error": 2.742668366474097e-11,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "950e9a3efc53496fe3866444731fa75aa0b5c15357f25aa59edba8b9ab891069",
+        "3dice_field.csv": "c864da4f578f7f7a53b18186ad841cd6b2750f92cf2913484f349d551c109437",
+        "sample_points_m.txt": "cd56124e3258aa25939de0cd1ccd60067fdd0f13c2451dbaf8d928eb613bb3be",
+        "3dice.log": "4280b376a5a259fe06cf1235d7feba3a0f4e6013211377cdeef3c989e41541d9"
+      }
+    },
+    {
+      "case_id": "h1_shifted_xy2_z4",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "a8950e847506cac98d9162631202f0136ae857f13dccbe8a14997f9017aab94f",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 144,
+      "min_temperature_k": 305.28123021155363,
+      "max_temperature_k": 305.45358987362357,
+      "volume_mean_temperature_k": 305.3769156380359,
+      "total_power_w": 0.0012958000000000002,
+      "reconstructed_top_outward_heat_w": 0.001295800000002414,
+      "heat_balance_relative_error": 1.862839725900391e-12,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "a76c8595d7b24d92d28572700cd15835b2525718a804fcd2d1d9454acb6bdc80",
+        "3dice_field.csv": "33e5b3cf439b081a2153c70eeafaea1f5fdc70ce05efb5b4dd1be2dd615f38c1",
+        "sample_points_m.txt": "a9f7a003993b4e7e12dc9fed95b305cd5d7a834fa87e64584dfbc1aed283f41e",
+        "3dice.log": "b350aeb7dad4af4f1c29d47ddc5cbe0d1bc13bcc763b1b6043ff3359e8ad8a64"
+      }
+    },
+    {
+      "case_id": "h1_shifted_xy4_z8",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "5fe2f0ed8e32b2ea56de058616e9294ee9f0e57cebf9625adaca1b500a22c586",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 1152,
+      "min_temperature_k": 305.238492615293,
+      "max_temperature_k": 305.4281498246699,
+      "volume_mean_temperature_k": 305.35508956817137,
+      "total_power_w": 0.0012958000000000002,
+      "reconstructed_top_outward_heat_w": 0.001295800000000417,
+      "heat_balance_relative_error": 3.2162935260335533e-13,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "10d3fbcb6e814ac630c870da5eb252f33adbeb59d4e015291586796049c3477a",
+        "3dice_field.csv": "2300c917cfdf6616f7d64f9597fa49b1ed4aabe197a4c091825c73003b498fcd",
+        "sample_points_m.txt": "fc1a22e8b3f616767d816eb9baac22789b213bccfc10b622e8c37eb7a15704d5",
+        "3dice.log": "2daf7caf45e4757f3075a895c6f14e654f5ae98dcadeedb9cd2a5b8be4526229"
+      }
+    },
+    {
+      "case_id": "h1_shifted_xy8_z16",
+      "status": "three_d_ice_solved_comsol_pending",
+      "contract_sha256": "c0bc1ac837461461d137c89a87327a9c7d67f154a24f7359335cb554a73d392c",
+      "build_sha256": "d67839b915c34edeef70f8dc8332cee2e3b5e0e8231635e47616886097cd28ef",
+      "returncode": 0,
+      "cell_count": 9216,
+      "min_temperature_k": 305.2127842736155,
+      "max_temperature_k": 305.4135103250339,
+      "volume_mean_temperature_k": 305.3417038100434,
+      "total_power_w": 0.0012958000000000002,
+      "reconstructed_top_outward_heat_w": 0.0012957999999888528,
+      "heat_balance_relative_error": 8.602664806781109e-12,
+      "comsol_stress_pa": null,
+      "artifacts_sha256": {
+        "temperature.vtk": "408a6d60af32e83065676f1f8097ec33469b999d8c751ea7d86d7e21f86b6f8f",
+        "3dice_field.csv": "454159786cb8dbf077718db3119988067da4d6b202cda1d1b2a324d61d51b2f5",
+        "sample_points_m.txt": "f750286027a626c02b643bcc4542e42f8a5e6893ed17f164def80e7066704222",
+        "3dice.log": "cd12d989a2f30b42c558de6bf6987a25786861e5f7bad2141d12437e4e6240bb"
+      }
+    }
+  ],
+  "comsol_validation": "pending_external_solver",
+  "mechanical_stress_pa": null,
+  "tap_solver_ready": false,
+  "known_backend_limitations": [
+    "Nonuniform lowest SOURCE/SOLID layer uses full cell height for internal vertical half-resistance; observed bottom-centre excess error documented in docs/MINIMAL_COUPON_RESULTS.md. No equation patch applied.",
+    "H1 mesh changes exceed position differences; no position-effect claim."
+  ]
+}

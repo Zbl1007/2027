@@ -1,0 +1,36 @@
+material silicon:
+ thermal conductivity 0.00012999999999999999;
+ volumetric heat capacity 1.6356600000000001e-12;
+
+top heat sink:
+ heat transfer coefficient 9.9999999999999995e-08;
+ temperature 300;
+dimensions:
+ chip length 10000, width 10000;
+ cell length 10000, width 10000;
+ non-uniform true;
+die slice:
+ source 6.25 silicon;
+stack:
+ die layer15 slice floorplan "source.flp";
+ die layer14 slice floorplan "source.flp";
+ die layer13 slice floorplan "source.flp";
+ die layer12 slice floorplan "source.flp";
+ die layer11 slice floorplan "source.flp";
+ die layer10 slice floorplan "source.flp";
+ die layer9 slice floorplan "source.flp";
+ die layer8 slice floorplan "source.flp";
+ die layer7 slice floorplan "source.flp";
+ die layer6 slice floorplan "source.flp";
+ die layer5 slice floorplan "source.flp";
+ die layer4 slice floorplan "source.flp";
+ die layer3 slice floorplan "source.flp";
+ die layer2 slice floorplan "source.flp";
+ die layer1 slice floorplan "source.flp";
+ die layer0 slice floorplan "source.flp";
+solver:
+ steady;
+ initial temperature 300;
+ numofcores 1;
+output:
+ T3d("temperature.vtk", final);
