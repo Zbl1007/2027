@@ -1,0 +1,9 @@
+{
+  "packaged_at": "2026-10-19T03:38:20.393695+00:00",
+  "file": "deliverables/comsol_h0_validation_20261019.zip",
+  "sha256": "22092d13f063cb4e8dfdd296ca7d38328895461fcbb547a7132d7eec322e1142",
+  "bytes": 553358,
+  "file_count": 115,
+  "zip_crc_and_sha256": "pass",
+  "final_result_directory": "outputs/comsol_h0/20261019T113253475633"
+}

@@ -1,0 +1,5 @@
+# These files are byte-addressed evidence. Preserve original LF or CRLF exactly.
+references/** -text
+cases/minimal_coupons/definition.json -text
+outputs/minimal_coupon_v1/manifest.json -text
+outputs/minimal_coupon_v1/h0_z16/** -text

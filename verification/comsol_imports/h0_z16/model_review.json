@@ -1,0 +1,29 @@
+{
+  "case_id": "h0_z16",
+  "reviewed_at": "2026-10-19",
+  "review_kind": "agent_review_of_COMSOL_exported_settings_and_saved_model_API_readback",
+  "human_gui_review_performed": false,
+  "requires_human_model_review": true,
+  "model_sha256": "9cfef4d36ba13c3f4bf12879ed07914b673c0aa5fc4dec98ef3f466311255240",
+  "scope": "H0 steady thermal fixture only; not H1, mechanics, TAP or optimization",
+  "checks": {
+    "geometry": "API-reported bounding box [0,0.01,0,0.01,0,0.0001] m; one block",
+    "silicon_material": "mat1 all domains; diagonal k=si_k=130 W/(m K); rho=2329 kg/m3; Cp=702.30141691713186 J/(kg K)",
+    "physics": "HeatTransfer; saved solid1 type SolidHeatTransferModel; only ht physics created",
+    "heating": "hs1 HeatSource all domains Q0=qSi=5e9 W/m3",
+    "top": "hf1 HeatFluxBoundary, ConvectiveHeatFlux, top named selection contains only boundary 4; h=1e5 W/(m2 K), Text=300 K",
+    "other_faces": "Default ins1 ThermalInsulation retained; no other imposed thermal boundary or radiation interface added",
+    "mesh": "Mapped boundary 3 -> Sweep to boundary 4; actual 32/256 hex elements",
+    "discretization": "ShapeProperty.order_temperature=2",
+    "solver": "Stationary nonlin=off; dDef.linsolver=pardiso",
+    "sampling": "Original 16 coordinate triples passed to COMSOL Interp; ext=0; CSV values transcribed from H0_TEMPERATURE log records",
+    "readback": "Both MPH files reloaded by ModelUtil.load; each sampleT re-evaluated; maximum difference 0 K",
+    "dof": "Solved and internal DOF parsed from solver log, sum checked against getU length; base 425+390=815, refined 2673+1350=4023",
+    "integrals": "COMSOL IntVolume(qSi) and IntSurface(hTop*(T-Tamb)) on top; additional conductive top flux integral retained"
+  },
+  "settings_exports": {
+    "h0_base_export.java": "a3876fb4d52851c5ff5267245a7431ae6d8dd6e620fef02b86cf0d70dbf19dd1",
+    "h0_refined_export.java": "19c0903a18ccfcda5f7585ce92f7ccca0a21b90f2ec73ac1cac060f9eb6f2b7e"
+  },
+  "limitation": "COMSOL exported Java history omits setInterpolationCoordinates arrays; use project runner and generated H0Thermal.java for full reproduction."
+}

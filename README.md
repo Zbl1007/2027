@@ -2,11 +2,12 @@
 
 独立研究工作区：在同一固定芯粒布局、固定 P/G 通孔数量与尺寸下，为电学、热学和热机械应力模型准备可追溯输入。
 
-当前阶段是 **参数溯源 + 3D-ICE—COMSOL 最小算例验证**。已用真实 3D-ICE 跑通独立测试算例；COMSOL 在用户另一台电脑上待运行。TAP 全尺寸模型仍缺参，没有三场求解结果，没有启动优化，也没有把测试参数自动采用为研究参数。
+当前阶段是 **参数溯源 + 3D-ICE—COMSOL 最小算例验证**。已用真实 3D-ICE 跑通独立测试算例；2026-10-19 在 Windows COMSOL 6.3.0.290 完成 H0 两档真实求解、保存模型回读和固定 16 点数值回填检查。TAP 全尺寸模型仍缺参，没有三场求解结果，没有启动优化，也没有把测试参数自动采用为研究参数。
 
 ## 现在从这里开始
 
-- [COMSOL 操作任务单](docs/COMSOL_TASK.md)：先建立 H0 硅块，导出16个固定点；再逐步做 H1、M0。
+- [COMSOL H0 验证报告](docs/COMSOL_H0_RESULTS.md)：两档已求解模型、完整日志、温度、积分、hash 和失败记录；[结果包](deliverables/comsol_h0_validation_20261019.zip)。仅 H0 数值验证通过，人工 GUI 复核未执行。
+- [COMSOL 操作任务单](docs/COMSOL_TASK.md)：保留建模定义；H1、M0 是后续工作，本轮未启动。
 - [可携带任务包](deliverables/3dice_comsol_minimal_v1.zip)：参数导入文本、几何分区、采样坐标、真实 3D-ICE 输出、回传模板和校验脚本；无已求解 `.mph`。
 - [本轮结果与已知限制](docs/MINIMAL_COUPON_RESULTS.md)：H0 解析收敛通过，H1 位置差异尚未分辨，并记录非均匀底层导热距离偏差。
 - [统一 SI 定义](cases/minimal_coupons/definition.json) / [测试参数来源](cases/minimal_coupons/provenance.json)：独立 `synthetic_fixture`，不覆盖 TAP 参数台账。

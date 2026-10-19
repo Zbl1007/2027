@@ -1,0 +1,36 @@
+{
+  "case_id": "h0_z16",
+  "status": "thermal_comparison_pass",
+  "scope": "this_thermal_fixture_and_sampling_only; not_all_cases_not_mechanics_not_TAP",
+  "contract_sha256": "9236da07173ad18aa28bfdad8ac1c0764983b3f1b507fb001535263f97c863c7",
+  "metadata_sha256": "380b45395c1e0f360f36b761b67eb688be8df2a2541358663741fe685910bd04",
+  "evidence": {
+    "model": {
+      "file": "h0_refined.mph",
+      "sha256": "9cfef4d36ba13c3f4bf12879ed07914b673c0aa5fc4dec98ef3f466311255240"
+    },
+    "solver_log": {
+      "file": "solver.log",
+      "sha256": "2f443627cd4d64b2aaa5773ddb85b272a0d624db5ace783804d2d6236405629b"
+    }
+  },
+  "comparison": {
+    "max_abs_error_k": 0.0009390023800506242,
+    "rmse_k": 0.00029693861388871916,
+    "sample_count": 16
+  },
+  "comsol_mesh_change": {
+    "max_abs_error_k": 2.148681232938543e-11,
+    "rmse_k": 2.0875406989872994e-11,
+    "sample_count": 16
+  },
+  "mesh_change_limit_k": 0.005,
+  "source_relative_error": 7.915446076367516e-14,
+  "balance_relative_error": 9.930545274982374e-13,
+  "comsol_fields_sha256": {
+    "temperature_base.csv": "73bdad95a18edd50f89b9c235535890ece6a0dddbe83587a91aaf4905b026d16",
+    "temperature_refined.csv": "1a3d9612fd754df5c26727a0cd80f0c01e14458b491ee0446bfce77deb7fe515"
+  },
+  "mechanical_stress_pa": null,
+  "requires_human_model_review": true
+}
